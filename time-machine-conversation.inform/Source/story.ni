@@ -8,15 +8,20 @@ When play begins:
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
 
-[ WORDS - 1433 ]
+[ WORDS - 1667 ]
+
+Book - Setup
 
 Part - Extensions
 
+[
 Include Epistemology by Eric Eve.
 Include Conversation Framework by Eric Eve.
 Include Conversation Suggestions by Eric Eve.
 Include Conversational Defaults by Eric Eve.
-[Include Conversation Package by Eric Eve.] [Can uncomment this Include line and comment out previous four Include lines]
+]
+
+Include Conversation Package by Eric Eve. [Can uncomment this Include line and comment out previous four Include lines]
 
 Part - Locations
 
@@ -30,6 +35,8 @@ Part - The Key
 watchett-key is a truth state that varies.
 watchett-key is false.
 
+The key is a thing.
+
 To say key-start:
 	say "Mr. Wells always kept it on his person.[no line break]".
 
@@ -41,26 +48,35 @@ To say key-end:
 		say "Looks like you found it.[no line break]";
 	otherwise:
 		say "[one of]Perhaps it's somewhere around the house.[no line break][or]The places I'd find it.[no line break][or]Where was the last place you saw Mr. Wells?[no line break][at random]".
+		
+Part - Other Things
 
-Part - Familiarity
+The pocket watch is a thing.
+The orrery is a thing.
+The petal is a thing.
+Food is a thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
+The poker is a thing.
+The newspaper is a thing.
+
+Part - Familiarity (for use with Conversation Package by Eric Eve)
 
 Wells is a familiar man.
 Humboldt is a familiar man.
 [Watchett is a familiar woman.] [Test with > tell humboldt about watchett and see what happens. ]
 
-The key is a familiar thing.
+The key is familiar. 
 The workshop-room is a familiar thing. Understand "workshop" as workshop-room.
 The workshop-door is a familiar thing. Understand "workshop door" as workshop-door.
 The front door is a familiar thing.
 
-The pocket watch is a familiar thing. 
-The orrery is a familiar thing.
-The petal is a familiar thing.
-Food is a familiar thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
-The poker is a familiar thing.
-The newspaper is a familiar thing.
+The pocket watch is familiar.
+The orrery is familiar.
+The petal is familiar.
+Food is familiar.
+The poker is familiar.
+The newspaper is familiar.
 
-Part - Subjects
+Part - Subjects (for use with Conversation Package by Eric Eve)
 
 experiments are a subject.
 time travel is a subject.
@@ -76,13 +92,13 @@ Watchett is in the Kitchen.
 The printed name of Watchett is "Mrs. Watchett".
 The description of Watchett is "Mrs. Watchett is [if Watchett is the current interlocutor]standing there looking patiently at you[otherwise]cleaning up after the evening meal."
 
-Chapter - Suggestions
+Chapter - Suggestions (for use with Conversation Package by Eric Eve)
 
 The ask-suggestions are { Wells, key, self-suggestion }.
 The tell-suggestions are { Humboldt }.
 [The other-suggestions are { other }.]
 
-Chapter - Conversation
+Chapter - Conversation (for use with Conversation Package by Eric Eve)
 
 Section - Hello
 
@@ -98,7 +114,7 @@ Instead of requesting Watchett for the key: say "'I'm sorry sir, I don't have it
 
 Section - Quizzing - "Asking About [something]"
 
-After quizzing Watchett about Wells: say "'Always working too hard on his experiments, he is. He probably just needs a bit of a rest.'" [DEL I'm sure the doctor will make everything right.'"]
+After quizzing Watchett about Wells: say "'Always working too hard on his experiments, he is. He probably just needs a bit of a rest.'"
 After quizzing Watchett about Humboldt: say "'The doctors been a friend of Mr. Wells for years. Not as long as you but almost as long.'"
 After quizzing Watchett about Watchett: say "'I'm really not one to talk about myself,' she says. 'Can I help you in any other way?'"
 
@@ -170,15 +186,15 @@ Test tell-watchett with "t wells / t humboldt / t key / t orrery / t time travel
 Test ask-for-watchett with "ask watchett for key / ask watchett for information".
 Test show-watchett with "show watchett poker / show watchett pocket watch / show watchett snow".
 
-Part - Humboldt
+Part - Humboldt 
 
 Humboldt is a person.
 Humboldt is male.
 Humboldt is in the Entryway.
 
-Chapter - Suggestions
+Chapter - Suggestions (for use with Conversation Package by Eric Eve)
 
-Chapter - Conversation
+Chapter - Conversation (for use with Conversation Package by Eric Eve)
 
 Section - Hello
 
@@ -209,3 +225,19 @@ Section - Default Responses
 [Default yes-no response for ]
 
 [Default response for ]
+
+Chapter - Conversation (for use with Standard Rules by Graham Nelson)
+
+Instead of telling Humboldt about "wells": try asking Humboldt about it.
+Instead of telling Humboldt about "workshop": try asking Humboldt about it.
+Instead of telling Humboldt about "time machine": try asking Humboldt about it.
+		
+Instead of asking Humboldt about "wells/madman/patient/lunatic": 
+	say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
+
+Instead of asking Humboldt about "workshop/shop": 
+	say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+
+Instead of asking Humboldt about "time machine": 
+	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'"
+
