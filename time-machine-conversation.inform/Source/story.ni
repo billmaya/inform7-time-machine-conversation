@@ -8,7 +8,7 @@ When play begins:
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
 
-[ WORDS - 1667 ]
+[ WORDS - 1713 ]
 
 Book - Setup
 
@@ -174,7 +174,7 @@ Default tell response for Watchett: say "[one of]'That's very interesting, sir.'
 [Default show response for ]
 [Defautl give-show response for ]
 
-[Default ask-for response for ]
+Default ask-for response for Watchett: say "'I am afraid I cannot help you with that, sir.'"
 [Default yes-no response for ]
 
 [Default response for ]
@@ -226,13 +226,18 @@ Section - Default Responses
 
 [Default response for ]
 
-Chapter - Conversation (for use with Standard Rules by Graham Nelson)
+Chapter - Conversation (for use with Conversation Package by Eric Eve)
 
-Instead of telling Humboldt about "wells": try asking Humboldt about it.
+[Instead of telling Humboldt about "wells": try asking Humboldt about it.]
+After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT." [try quizzing Humboldt about Wells.]
+
 Instead of telling Humboldt about "workshop": try asking Humboldt about it.
 Instead of telling Humboldt about "time machine": try asking Humboldt about it.
+
+[After quizzing Humboldt about Wells: say "ASKING HUMBOLDT ABOUT WELLS."]
 		
-Instead of asking Humboldt about "wells/madman/patient/lunatic": 
+[Instead of asking Humboldt about "wells/madman/patient/lunatic":] 
+After quizzing Humboldt about Wells:
 	say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
 
 Instead of asking Humboldt about "workshop/shop": 
