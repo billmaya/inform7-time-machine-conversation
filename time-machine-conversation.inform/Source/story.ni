@@ -80,7 +80,7 @@ Part - Subjects (for use with Conversation Package by Eric Eve)
 
 experiments are a subject.
 time travel is a subject.
-her-work is a subject. Understand "work" as her-work.
+her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
 Book - Characters
 
@@ -94,7 +94,7 @@ The description of Watchett is "Mrs. Watchett is [if Watchett is the current int
 
 Chapter - Suggestions (for use with Conversation Package by Eric Eve)
 
-The ask-suggestions are { Wells, key, self-suggestion }.
+The ask-suggestions are { Wells, key, time travel, experiments, her-work, self-suggestion }.
 The tell-suggestions are { Humboldt }.
 [The other-suggestions are { other }.]
 
