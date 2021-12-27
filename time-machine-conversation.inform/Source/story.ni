@@ -58,7 +58,7 @@ Food is a thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
 The poker is a thing.
 The newspaper is a thing.
 
-Part - Familiarity (for use with Conversation Package by Eric Eve)
+Part - Familiarity 
 
 Wells is a familiar man.
 Humboldt is a familiar man.
@@ -76,7 +76,7 @@ Food is familiar.
 The poker is familiar.
 The newspaper is familiar.
 
-Part - Subjects (for use with Conversation Package by Eric Eve)
+Part - Subjects 
 
 experiments are a subject.
 time travel is a subject.
@@ -92,13 +92,13 @@ Watchett is in the Kitchen.
 The printed name of Watchett is "Mrs. Watchett".
 The description of Watchett is "Mrs. Watchett is [if Watchett is the current interlocutor]standing there looking patiently at you[otherwise]cleaning up after the evening meal."
 
-Chapter - Suggestions (for use with Conversation Package by Eric Eve)
+Chapter - Suggestions 
 
 The ask-suggestions are { Wells, key, time travel, experiments, her-work, self-suggestion }.
 The tell-suggestions are { Humboldt }.
 [The other-suggestions are { other }.]
 
-Chapter - Conversation (for use with Conversation Package by Eric Eve)
+Chapter - Conversation 
 
 Section - Hello
 
@@ -192,9 +192,9 @@ Humboldt is a person.
 Humboldt is male.
 Humboldt is in the Entryway.
 
-Chapter - Suggestions (for use with Conversation Package by Eric Eve)
+Chapter - Suggestions
 
-Chapter - Conversation (for use with Conversation Package by Eric Eve)
+Chapter - Conversation
 
 Section - Hello
 
@@ -226,7 +226,7 @@ Section - Default Responses
 
 [Default response for ]
 
-Chapter - Conversation (for use with Conversation Package by Eric Eve)
+Chapter - Conversation 
 
 [Instead of telling Humboldt about "wells": try asking Humboldt about it.]
 After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT." [try quizzing Humboldt about Wells.]
