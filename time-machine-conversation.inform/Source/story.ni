@@ -8,19 +8,17 @@ When play begins:
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
 
-[ WORDS - 1713 ]
+[ WORDS - 1833 ]
 
 Book - Setup
 
 Part - Extensions
 
-[
-Include Epistemology by Eric Eve.
+
+[Include Epistemology by Eric Eve.
 Include Conversation Framework by Eric Eve.
 Include Conversation Suggestions by Eric Eve.
-Include Conversational Defaults by Eric Eve.
-]
-
+Include Conversational Defaults by Eric Eve.]
 Include Conversation Package by Eric Eve. [Can uncomment this Include line and comment out previous four Include lines]
 
 Part - Locations
@@ -35,7 +33,7 @@ Part - The Key
 watchett-key is a truth state that varies.
 watchett-key is false.
 
-The key is a thing.
+The key is a thing. The printed name is "workshop key".
 
 To say key-start:
 	say "Mr. Wells always kept it on his person.[no line break]".
@@ -58,14 +56,17 @@ Food is a thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
 The poker is a thing.
 The newspaper is a thing.
 
+xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
+abc-suggestion is a misc-suggestion. The printed name is "say ABC".
+
 Part - Familiarity 
 
 Wells is a familiar man.
 Humboldt is a familiar man.
 [Watchett is a familiar woman.] [Test with > tell humboldt about watchett and see what happens. ]
 
-The key is familiar. 
-The workshop-room is a familiar thing. Understand "workshop" as workshop-room.
+The key is familiar. The printed name is "workshop key".
+The workshop-room is a familiar thing. Understand "workshop" as workshop-room. The printed name of workshop-room is "workshop".
 The workshop-door is a familiar thing. Understand "workshop door" as workshop-door.
 The front door is a familiar thing.
 
@@ -78,7 +79,7 @@ The newspaper is familiar.
 
 Part - Subjects 
 
-experiments are a subject.
+experiments are a subject. The printed name is "Wells['] experiments".
 time travel is a subject.
 her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
@@ -94,9 +95,9 @@ The description of Watchett is "Mrs. Watchett is [if Watchett is the current int
 
 Chapter - Suggestions 
 
-The ask-suggestions are { Wells, key, time travel, experiments, her-work, self-suggestion }.
+The ask-suggestions are { Wells, workshop-room, time travel, her-work, self-suggestion }.
 The tell-suggestions are { Humboldt }.
-[The other-suggestions are { other }.]
+[The other-suggestions are { xyz-suggestion, abc-suggestion, yes-no-suggestion }.]
 
 Chapter - Conversation 
 
@@ -114,31 +115,48 @@ Instead of requesting Watchett for the key: say "'I'm sorry sir, I don't have it
 
 Section - Quizzing - "Asking About [something]"
 
-After quizzing Watchett about Wells: say "'Always working too hard on his experiments, he is. He probably just needs a bit of a rest.'"
-After quizzing Watchett about Humboldt: say "'The doctors been a friend of Mr. Wells for years. Not as long as you but almost as long.'"
-After quizzing Watchett about Watchett: say "'I'm really not one to talk about myself,' she says. 'Can I help you in any other way?'"
+After quizzing Watchett about Wells: say "[remove Wells ask suggestion][add experiments ask suggestion]'Always working too hard on his experiments, he is. He probably just needs a bit of a rest.'"
+After quizzing Watchett about Humboldt: say "'The doctors has been a friend of Mr. Wells for years. Not as long as you but almost as long.'"
+After quizzing Watchett about Watchett: say "[remove self-suggestion ask suggestion]'I[']m really not one to talk about myself,' she says. 'Can I help you in any other way?'"
 
 After quizzing Watchett about the key:
 	say "'[key-start] [key-middle] [key-end]'[line break]";
 	now watchett-key is true.
 
-After quizzing Watchett about workshop-room: say "'Never been in there, not even to clean. Only Mr. Wells had the key.'"
-After quizzing Watchett about the workshop-door: say "'Locked, always locked. Mr. Well had the only key.'"
+After quizzing Watchett about workshop-room: 
+	say "[remove workshop-room ask suggestion]";
+	say "'I've never been in there, not even to clean. Mr. Wells had the only key to that door.'"
+
+
+After quizzing Watchett about the workshop-door: [DEL say "[remove workshop-door ask suggestion]'Locked, always locked. Mr. Wells had the only key.'"]
+	say "[remove workshop-door ask suggestion]";
+	say "'Locked, always locked. Mr. Wells had the only key.'"
+
 After quizzing Watchett about the front door: say "'Best you warm up by the fire first. Much too cold to be outside the way you're dressed.'"
 After quizzing Watchett about the pocket watch: say "'That looks like Mr. Wells['] watch. I'd put it on the desk in the library for when he gets back.'"
 After quizzing Watchett about the orrery: say "'Built by Mr. Wells,' she says. 'He's quite the inventor, he is.'"
 After quizzing Watchett about the petal: say "'Very pretty, I guess. But you cannot tell much about the flower from a single petal.'"
 After quizzing Watchett about food: say "'Still hungry after that meal all of you had?' she says. 'Perhaps a cup of tea to calm your stomach?'" 
-After quizzing Watchett about her-work: say "'Just cleaning up after tonight's meal,' she says. 'Should be done soon.'"
+After quizzing Watchett about her-work: 
+	say "[remove her-work ask suggestion]";
+	say "'Just cleaning up after tonight's meal,' she says. 'Should be done soon.'"
+
 After quizzing Watchett about poker: say "'Perhaps you should put that back by the fire where it belongs. Best place for it, I think.' she says."
 
-After quizzing Watchett about experiments: say "'I wouldn't know anything Mr. Wells['] experiments. He never talked to me about his work. Did all his experiments in his workshop.'"
-After quizzing Watchett about time travel: say "'I wouldn't know anything about. Running a house, that's my lot in life."
+After quizzing Watchett about experiments:
+	say "[remove experiments ask suggestion]";
+	say "'I wouldn't know anything about Mr. Wells['] experiments. He never talked to me about his work. Did all his those things in his workshop behind closed doors. Raised a dreadful racket sometimes, I tell you.'"
+
+After quizzing Watchett about time travel:
+	say "[remove time travel ask suggestion]";
+	say "'I wouldn't know anything about that. Running a house, one day at a time, that's my lot in life."
 
 Section - Informing - "Telling About [something]"
 
 After informing Watchett about Wells: say "'Very sad,' she says. 'I'm glad the doctor is involved.'"
-After informing Watchett about Humboldt: say "'That's very interesting. I'm sure the doctor knows what he's doing.'"
+After informing Watchett about Humboldt: 
+	say "[remove Humboldt tell suggestion]";
+	say "'That's very interesting. I'm sure the doctor knows what he's doing.'"
 
 After informing Watchett about the key: say "'I told Mr. Wells that he should have a copy of that key made for times just like this,' she says, tutting softly to herself." 
 After informing Watchett about the orrery: say "'Keeps perfect time,' she says. Nothing like it I've ever seen elsewhere."
@@ -193,6 +211,10 @@ Humboldt is male.
 Humboldt is in the Entryway.
 
 Chapter - Suggestions
+
+[The ask-suggestions are {  }.]
+[The tell-suggestions are {  }.]
+[The other-suggestions are {  }.]
 
 Chapter - Conversation
 
