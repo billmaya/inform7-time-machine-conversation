@@ -11,8 +11,11 @@ When play begins:
 	[Now suggest-on-greeting is false;]
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
+	
+Every turn:
+	refresh the character-list window.
 
-[ WORDS - 1833 ]
+[ WORDS - 2130 ]
 
 Book - Setup
 
@@ -58,6 +61,12 @@ The measurement of the inventory-title window is 75.
 The inventory window is a text buffer g-window spawned by the inventory-title window.
 The position of the inventory window is g-placebelow.
 The measurement of the inventory window is 95.
+
+Chapter - Rules
+
+Rule for refreshing the character-list window:
+	try taking inventory.
+
 
 Part - Locations
 
