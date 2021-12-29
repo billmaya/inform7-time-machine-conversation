@@ -4,6 +4,10 @@ The story headline is "Conversation Experiments for 'The Time Machine'".
 
 When play begins:
 	say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";
+	Open character-title window;
+	Open character-list window;
+	Open talking-to-title window;
+	Open talking-to-character window;
 	[Now suggest-on-greeting is false;]
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
@@ -20,6 +24,36 @@ Include Conversation Framework by Eric Eve.
 Include Conversation Suggestions by Eric Eve.
 Include Conversational Defaults by Eric Eve.]
 Include Conversation Package by Eric Eve. [Can uncomment this Include line and comment out previous four Include lines]
+
+Include Flexible Windows by Jon Ingold.
+
+Part - User Interface
+
+Chapter - Setup
+
+The character-title window is a text grid g-window spawned by the main window.
+The position of the character-title window is g-placeright.
+The measurement of the character-title window is 25.
+
+The character-list window is a text buffer g-window spawned by the character-title window.
+The position of the character-list window is g-placebelow.
+The measurement of the character-list window is 95.
+
+The talking-to-title window is a text grid g-window spawned by the character-list window.
+The position of the talking-to-title window is g-placebelow.
+The measurement of the talking-to-title window is 75.
+
+The talking-to-character window is a text buffer g-window spawned by the talking-to-title window.
+The position of the talking-to-character window is g-placebelow.
+The measurement of the talking-to-character window is 95.
+
+The character-topics window is a text buffer g-window spawned by the talking-to-character window.
+The position of the character-topics window is g-placebelow.
+The measurement of the character-topics window is 95.
+
+The inventory-title window is a text grid g-window spawned by the character-topics window.
+The position of the character-topics window is g-placebelow.
+The measurement of the inventory-title window is 95.
 
 Part - Locations
 
