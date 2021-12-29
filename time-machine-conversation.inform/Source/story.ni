@@ -53,7 +53,11 @@ The measurement of the character-topics window is 95.
 
 The inventory-title window is a text grid g-window spawned by the character-topics window.
 The position of the character-topics window is g-placebelow.
-The measurement of the inventory-title window is 95.
+The measurement of the inventory-title window is 75.
+
+The inventory window is a text buffer g-window spawned by the inventory-title window.
+The position of the inventory window is g-placebelow.
+The measurement of the inventory window is 95.
 
 Part - Locations
 
