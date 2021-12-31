@@ -4,18 +4,21 @@ The story headline is "Conversation Experiments for 'The Time Machine'".
 
 When play begins:
 	say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";
-	Open character-title window;
-	Open character-list window;
-	Open talking-to-title window;
+	Open title-characters window;
+	Open list-characters window;
+	[Open talking-to-title window;
 	Open talking-to-character window;
+	Open character-topics window;
+	Open inventory-title window;
+	Open inventory-list window;]
 	[Now suggest-on-greeting is false;]
 	Now the player is carrying the pocket watch;
 	Now the player is carrying the poker.
-	
+[	
 Every turn:
-	refresh the character-list window.
-
-[ WORDS - 2130 ]
+	refresh the inventory-list window.
+]
+[ WORDS - 2378 ]
 
 Book - Setup
 
@@ -34,39 +37,82 @@ Part - User Interface
 
 Chapter - Setup
 
-The character-title window is a text grid g-window spawned by the main window.
-The position of the character-title window is g-placeright.
-The measurement of the character-title window is 25.
+[
+The scale method of the side window is g-proportional. The measurement of the side window is 25.
+The scale method of the banner window is g-fixed-size. The measurement of the banner window is 30.
+]
 
-The character-list window is a text buffer g-window spawned by the character-title window.
-The position of the character-list window is g-placebelow.
-The measurement of the character-list window is 95.
+The title-characters window is a text grid g-window spawned by the main window.
+The position of the title-characters window is g-placeright.
+The scale method of the title-characters window is g-proportional.
+The measurement of the title-characters window is 25.
 
-The talking-to-title window is a text grid g-window spawned by the character-list window.
+The list-characters window is a text buffer g-window spawned by the title-characters window.
+The position of the list-characters window is g-placebelow.
+The scale method of the list-characters window is g-proportional.
+The measurement of the list-characters window is 98.
+
+[The talking-to-title window is a text grid g-window spawned by the list-characters window.
 The position of the talking-to-title window is g-placebelow.
+The scale method of the talking-to-title window is g-proportional.
 The measurement of the talking-to-title window is 75.
 
 The talking-to-character window is a text buffer g-window spawned by the talking-to-title window.
 The position of the talking-to-character window is g-placebelow.
+The scale method of the talking-to-character window is g-proportional.
 The measurement of the talking-to-character window is 95.
 
 The character-topics window is a text buffer g-window spawned by the talking-to-character window.
 The position of the character-topics window is g-placebelow.
+The scale method of the character-topics window is g-proportional.
 The measurement of the character-topics window is 95.
 
 The inventory-title window is a text grid g-window spawned by the character-topics window.
 The position of the character-topics window is g-placebelow.
+The scale method of the inventory-title window is g-proportional.
 The measurement of the inventory-title window is 75.
 
-The inventory window is a text buffer g-window spawned by the inventory-title window.
-The position of the inventory window is g-placebelow.
-The measurement of the inventory window is 95.
+The inventory-list window is a text buffer g-window spawned by the inventory-title window.
+The position of the inventory-list window is g-placebelow.
+The scale method of the inventory-list window is g-proportional.
+The measurement of the inventory-list window is 95.]
 
 Chapter - Rules
 
-Rule for refreshing the character-list window:
-	try taking inventory.
+[Rule for refreshing the inventory-list window:
+	try taking inventory.]
+	
+Rule for refreshing the title-characters window:
+	say "Characters in the Room".
+	
+Rule for refreshing the list-characters window:
+	say "[Watchett][line break]";
+	say "[Humboldt][line break]";
+	say "Mr. Gernsback[line break]";
+	say "Weena[line break]";
+	say "Eloi".
+	
+Chapter - Styles
 
+Table of User Styles (continued)
+window	color	background color
+title-characters	"#FFFFFF"	"#000000"		
+
+[
+Table of User Styles (continued)
+window (a g-window)    	
+style name (a glulx text style)    	
+background color (a text)    	
+color (a text)    	
+first line indentation (a number)    	
+fixed width (a truth state)    	
+font weight (a font weight)    	
+indentation (a number)    	
+italic (a truth state)    	
+justification (a text justification)    	
+relative size (a number)    	
+reversed (a truth state)
+]
 
 Part - Locations
 
@@ -256,6 +302,7 @@ Part - Humboldt
 Humboldt is a person.
 Humboldt is male.
 Humboldt is in the Entryway.
+The printed name of Humboldt is "Dr. Humboldt".
 
 Chapter - Suggestions
 
