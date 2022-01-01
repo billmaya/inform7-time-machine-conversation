@@ -24,7 +24,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2570 ]
+[ WORDS - 2557 ]
 
 Book - Setup
 
@@ -94,12 +94,7 @@ Rule for refreshing the title-characters window:
 	say "Characters in the Room".
 	
 Rule for refreshing the list-characters window:
-	say "[Watchett][line break]";
-	say "[Humboldt][line break]";
-	say "Mr. Gernsback[line break]";
-	say "Weena[line break]";
-	say "Eloi[paragraph break]";
-	say "[italic type]<Static List>".
+	say "[list of people in room]". [Need to only list characters in player location without player]
 
 Rule for refreshing the title-talking-to window:
 	say "Talking To".
