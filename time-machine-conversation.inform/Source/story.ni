@@ -24,7 +24,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2574 ]
+[ WORDS - 2570 ]
 
 Book - Setup
 
@@ -105,9 +105,7 @@ Rule for refreshing the title-talking-to window:
 	say "Talking To".
 	
 Rule for refreshing the talking-to-character window:
-	if current interlocutor is nothing:
-		say "No one";
-	otherwise:
+	if current interlocutor is not nothing:
 		say current interlocutor.
 	
 Rule for refreshing the title-topics window:
