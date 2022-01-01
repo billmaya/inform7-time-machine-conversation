@@ -4,23 +4,27 @@ The story headline is "Conversation Experiments for 'The Time Machine'".
 
 When play begins:
 	say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";
-	Open right-sidebar window;
-	Open title-characters window;
-	Open list-characters window;
-	Open title-talking-to window;
-	Open talking-to-character window;
-	Open title-topics window;
-	Open character-topics window;
-	Open title-inventory window;
-	Open inventory-list window;
-	[Now suggest-on-greeting is false;]
-	Now the player is carrying the pocket watch;
-	Now the player is carrying the poker.
+	open right-sidebar window;
+	open title-characters window;
+	open list-characters window;
+	open title-talking-to window;
+	open talking-to-character window;
+	open title-topics window;
+	open character-topics window;
+	open title-inventory window;
+	open list-inventory window;
+	[refresh the list-inventory window; [??? - does not work]]
+	now suggest-on-greeting is false;
+	now the player is carrying the pocket watch;
+	now the player is carrying the poker.
 	
 Every turn:
-	refresh the inventory-list window.
+	refresh the list-characters window;
+	refresh the talking-to-character window;
+	refresh the character-topics window;
+	refresh the list-inventory window.
 
-[ WORDS - 2378 ]
+[ WORDS - 2574 ]
 
 Book - Setup
 
@@ -39,55 +43,50 @@ Part - User Interface
 
 Chapter - Setup
 
-[
-The scale method of the side window is g-proportional. The measurement of the side window is 25.
-The scale method of the banner window is g-fixed-size. The measurement of the banner window is 30.
-]
-
-The right-sidebar window is a graphics [text grid] g-window spawned by the main window.
+The right-sidebar window is a graphics g-window spawned by the main window.
 The position of the right-sidebar window is g-placeright.
-The scale method of the right-sidebar window is g-fixed-size. [g-proportional.]
-The measurement of the right-sidebar window is 270. [25.]
+The scale method of the right-sidebar window is g-fixed-size.
+The measurement of the right-sidebar window is 270.
 
 The title-characters window is a text grid g-window spawned by the right-sidebar window.
-The position of the title-characters window is g-placeabove. [g-placebelow.]
-The scale method of the title-characters window is g-fixed-size. [g-proportional.]
-The measurement of the title-characters window is 1. [25.]
+The position of the title-characters window is g-placeabove.
+The scale method of the title-characters window is g-fixed-size.
+The measurement of the title-characters window is 1.
 
-The list-characters window is a text buffer g-window spawned by the right-sidebar window. [title-characters window.]
-The position of the list-characters window is g-placeabove. [g-placebelow.]
-The scale method of the list-characters window is g-fixed-size. [g-proportional.]
-The measurement of the list-characters window is 8. [75.]
+The list-characters window is a text buffer g-window spawned by the right-sidebar window.
+The position of the list-characters window is g-placeabove.
+The scale method of the list-characters window is g-fixed-size.
+The measurement of the list-characters window is 8.
 
-The title-talking-to window is a text grid g-window spawned by the right-sidebar window. [list-characters window.]
-The position of the title-talking-to window is g-placeabove. [g-placebelow.]
-The scale method of the title-talking-to window is g-fixed-size. [g-proportional.]
-The measurement of the title-talking-to window is 1. [95.]
+The title-talking-to window is a text grid g-window spawned by the right-sidebar window.
+The position of the title-talking-to window is g-placeabove.
+The scale method of the title-talking-to window is g-fixed-size.
+The measurement of the title-talking-to window is 1.
 
-The talking-to-character window is a text buffer g-window spawned by the right-sidebar window. [talking-to-title window.]
-The position of the talking-to-character window is g-placeabove. [g-placebelow.]
-The scale method of the talking-to-character window is g-fixed-size. [g-proportional.]
-The measurement of the talking-to-character window is 4. [95.]
+The talking-to-character window is a text buffer g-window spawned by the right-sidebar window.
+The position of the talking-to-character window is g-placeabove.
+The scale method of the talking-to-character window is g-fixed-size.
+The measurement of the talking-to-character window is 1.
 
 The title-topics window is a text grid g-window spawned by the right-sidebar window.
 The position of the title-topics window is g-placeabove.
 The scale method of the title-topics window is g-fixed-size.
 The measurement of the title-topics window is 1.
 
-The character-topics window is a text buffer g-window spawned by the right-sidebar window. [talking-to-character window.]
-The position of the character-topics window is g-placeabove. [g-placebelow.]
-The scale method of the character-topics window is g-fixed-size. [g-proportional.]
-The measurement of the character-topics window is 16. [95.]
+The character-topics window is a text buffer g-window spawned by the right-sidebar window.
+The position of the character-topics window is g-placeabove.
+The scale method of the character-topics window is g-fixed-size.
+The measurement of the character-topics window is 7.
 
-The title-inventory window is a text grid g-window spawned by the right-sidebar window. [character-topics window.]
-The position of the title-inventory window is g-placeabove. [g-placebelow.]
-The scale method of the title-inventory window is g-fixed-size. [g-proportional.]
-The measurement of the title-inventory window is 1. [75.]
+The title-inventory window is a text grid g-window spawned by the right-sidebar window.
+The position of the title-inventory window is g-placeabove.
+The scale method of the title-inventory window is g-fixed-size.
+The measurement of the title-inventory window is 1.
 
-The inventory-list window is a text buffer g-window spawned by the right-sidebar window. [inventory-title window.]
-The position of the inventory-list window is g-placeabove. [g-placebelow.]
-The scale method of the inventory-list window is g-fixed-size. [g-proportional.]
-The measurement of the inventory-list window is 16. [95.]
+The list-inventory window is a text buffer g-window spawned by the right-sidebar window.
+The position of the list-inventory window is g-placeabove.
+The scale method of the list-inventory window is g-fixed-size.
+The measurement of the list-inventory window is 16.
 
 Chapter - Rules
 	
@@ -99,34 +98,38 @@ Rule for refreshing the list-characters window:
 	say "[Humboldt][line break]";
 	say "Mr. Gernsback[line break]";
 	say "Weena[line break]";
-	say "Eloi".
+	say "Eloi[paragraph break]";
+	say "[italic type]<Static List>".
 
 Rule for refreshing the title-talking-to window:
 	say "Talking To".
 	
 Rule for refreshing the talking-to-character window:
-	say "[Watchett]".
+	if current interlocutor is nothing:
+		say "No one";
+	otherwise:
+		say current interlocutor.
 	
 Rule for refreshing the title-topics window:
 	say "Topics to Talk About".
 	
 Rule for refreshing the character-topics window:
-	say "You could ask her about Wells, the workshop, time travel, her work or herself; or tell her about Dr. Humboldt."
+	try listing suggested topics.
 	
 Rule for refreshing the title-inventory window:
 	say "Inventory".
 	
-Rule for refreshing the inventory-list window:
+Rule for refreshing the list-inventory window:
 	try taking inventory.
 	
 Chapter - Styles
 
-Table of User Styles (continued)
+[Table of User Styles (continued)
 window	color	background color	font weight	fixed width
 title-characters	"#FFFFFF"	"#000000"	light-weight	false
 title-talking-to	"#FFFFFF"	"#000000"	light-weight	false
 title-topics	"#FFFFFF"	"#000000"	light-weight	false
-[title-inventory	"#FFFFFF"	"#000000"	light-weight	false]
+title-inventory	"#FFFFFF"	"#000000"	light-weight	false]
 
 [
 Table of User Styles (continued)
