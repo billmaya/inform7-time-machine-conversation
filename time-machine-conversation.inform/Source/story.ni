@@ -24,7 +24,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2557 ]
+[ WORDS - 2554 ]
 
 Book - Setup
 
@@ -94,7 +94,7 @@ Rule for refreshing the title-characters window:
 	say "Characters in the Room".
 	
 Rule for refreshing the list-characters window:
-	say "[list of people in room]". [Need to only list characters in player location without player]
+	say "[list of people that are not player in location of player]".
 
 Rule for refreshing the title-talking-to window:
 	say "Talking To".
