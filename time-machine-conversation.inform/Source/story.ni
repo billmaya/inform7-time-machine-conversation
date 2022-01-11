@@ -24,12 +24,11 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2554 ]
+[ WORDS - 2736 ]
 
-Book - Setup
+Volume - Setup
 
-Part - Extensions
-
+Book - Extensions
 
 [Include Epistemology by Eric Eve.
 Include Conversation Framework by Eric Eve.
@@ -39,9 +38,9 @@ Include Conversation Package by Eric Eve. [Can uncomment this Include line and c
 
 Include Flexible Windows by Jon Ingold.
 
-Part - User Interface
+Book - User Interface
 
-Chapter - Setup
+Part - Setup
 
 The right-sidebar window is a graphics g-window spawned by the main window.
 The position of the right-sidebar window is g-placeright.
@@ -88,7 +87,7 @@ The position of the list-inventory window is g-placeabove.
 The scale method of the list-inventory window is g-fixed-size.
 The measurement of the list-inventory window is 16.
 
-Chapter - Rules
+Part - Rules
 	
 Rule for refreshing the title-characters window:
 	say "Characters in the Room".
@@ -115,7 +114,7 @@ Rule for refreshing the title-inventory window:
 Rule for refreshing the list-inventory window:
 	try taking inventory.
 	
-Chapter - Styles
+Part - Styles
 
 [Table of User Styles (continued)
 window	color	background color	font weight	fixed width
@@ -140,14 +139,14 @@ relative size (a number)
 reversed (a truth state)
 ]
 
-Part - Locations
+Book - Locations
 
 The Kitchen is a room. "The Entryway is south."
 The Kitchen is north of the Entryway.
 
 The Entryway is a room. "The Kitchen is north."
 
-Part - The Key
+Book - The Key
 
 watchett-key is a truth state that varies.
 watchett-key is false.
@@ -166,7 +165,7 @@ To say key-end:
 	otherwise:
 		say "[one of]Perhaps it's somewhere around the house.[no line break][or]The places I'd find it.[no line break][or]Where was the last place you saw Mr. Wells?[no line break][at random]".
 		
-Part - Other Things
+Book - Other Things
 
 The pocket watch is a thing.
 The orrery is a thing.
@@ -178,7 +177,7 @@ The newspaper is a thing.
 xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
 abc-suggestion is a misc-suggestion. The printed name is "say ABC".
 
-Part - Familiarity 
+Book - Familiarity 
 
 Wells is a familiar man.
 Humboldt is a familiar man.
@@ -196,15 +195,16 @@ Food is familiar.
 The poker is familiar.
 The newspaper is familiar.
 
-Part - Subjects 
+Volume - Subjects 
 
 experiments are a subject. The printed name is "Wells['] experiments".
 time travel is a subject.
+The time machine is a subject.
 her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
-Book - Characters
+Volume - Characters
 
-Part - Watchett
+Book - Watchett
 
 Watchett is a person. 
 Watchett is female.
@@ -212,21 +212,31 @@ Watchett is in the Kitchen.
 The printed name of Watchett is "Mrs. Watchett".
 The description of Watchett is "Mrs. Watchett is [if Watchett is the current interlocutor]standing there looking patiently at you[otherwise]cleaning up after the evening meal."
 
-Chapter - Suggestions 
+Part - Suggestions 
 
 The ask-suggestions are { Wells, workshop-room, time travel, her-work, self-suggestion }.
 The tell-suggestions are { Humboldt }.
 [The other-suggestions are { xyz-suggestion, abc-suggestion, yes-no-suggestion }.]
 
-Chapter - Conversation 
+Part - Conversation 
 
-Section - Hello
+Chapter - Hello
 
 After saying hello to Watchett when the greeting type is explicit: 
 	say "Mrs. Watchett pauses in her work. 'Good evening sir,' she replies."
 
 After saying hello to Watchett when the greeting type is implicit:
 	say "Mrs. Watchett pauses in her work and thinks before answering. [run paragraph on]"
+
+Chapter - Goodbye
+
+After saying goodbye to Watchett when the farewell type is explicit: 
+	say "'GOODBYE TO YOU TO, SIR.'"
+	
+After saying goodbye to Watchett when the farewell type is implicit:
+	say "WITH A BRIEF NOD YOU LEAVE THE ROOM. MRS. WATCHETT SAYS 'WELL I NEVER SAW SOMEONE SO RUDE.' AND CONTINUES HER WORK."
+	
+Chapter - In The Kitchen
 
 Section - Requests - "Asking For [something]"
 
@@ -291,15 +301,7 @@ Section - Showing
 Instead of showing noun to Watchett: try quizzing Watchett about noun.
 Instead of showing something to Watchett: say "SHOWING [noun]".
 
-Section - Goodbye
-
-After saying goodbye to Watchett when the farewell type is explicit: 
-	say "'GOODBYE TO YOU TO, SIR.'"
-	
-After saying goodbye to Watchett when the farewell type is implicit:
-	say "WITH A BRIEF NOD YOU LEAVE THE ROOM. MRS. WATCHETT SAYS 'WELL I NEVER SAW SOMEONE SO RUDE.' AND CONTINUES HER WORK."
-
-Section - Default Responses
+Chapter - Default Responses
 
 Default ask response for Watchett: say "[one of]'I'm afraid I don't have much to say about that, sir. Anything else I can help you with?'[or]Thinking for a moment, she replies 'I wouldn't know anything about that, sir.'[at random]"
 
@@ -316,29 +318,57 @@ Default ask-for response for Watchett: say "'I am afraid I cannot help you with 
 
 [Default response for ]
 
-Chapter - Testing
+Part - Testing
 
 Test ask-watchett with "a key / a workshop-room / a workshop-door / a front door / a pocket watch / a orrery / a petal / a food / a her-work / a poker / a experiments / a time travel".
 Test tell-watchett with "t wells / t humboldt / t key / t orrery / t time travel".
 Test ask-for-watchett with "ask watchett for key / ask watchett for information".
 Test show-watchett with "show watchett poker / show watchett pocket watch / show watchett snow".
 
-Part - Humboldt 
+Book - Humboldt 
 
 Humboldt is a person.
 Humboldt is male.
 Humboldt is in the Entryway.
 The printed name of Humboldt is "Dr. Humboldt".
 
-Chapter - Suggestions
+Part - Suggestions
 
-[The ask-suggestions are {  }.]
+The ask-suggestions are { Wells }.
 [The tell-suggestions are {  }.]
 [The other-suggestions are {  }.]
 
-Chapter - Conversation
+Part - Conversation
 
-Section - Hello
+Chapter - Hello
+
+Chapter - Goodbye
+
+Chapter - Opening Scene
+
+Section - Requests - "Asking For [something]"
+
+Section - Quizzing - "Asking About [something]"
+
+After quizzing Humboldt about Wells: say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
+[		say "'He's sedated and resting.'"]
+
+After quizzing Humboldt about the workshop-room: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+
+After quizzing Humboldt about the time machine: 
+	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'"
+
+Section - Informing - "Telling About [something]"
+
+After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
+After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
+After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
+
+Section - Imploring - "Asking For [subjecct]"
+
+Section - Showing
+
+Chapter - Ending Scene
 
 Section - Requests - "Asking For [something]"
 
@@ -348,11 +378,7 @@ Section - Informing - "Telling About [something]"
 
 Section - Imploring - "Asking For [subjecct]"
 
-Section - Showing
-
-Section - Goodbye
-
-Section - Default Responses
+Chapter - Default Responses
 
 [Default ask response for ]
 [Default answer response for ]
@@ -368,23 +394,51 @@ Section - Default Responses
 
 [Default response for ]
 
-Chapter - Conversation 
+Part - Patience
 
-[Instead of telling Humboldt about "wells": try asking Humboldt about it.]
-After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT." [try quizzing Humboldt about Wells.]
+[Writing §4.9. Using new kinds of value in properties]
+patience is a kind of a value.
+The patiences are accepting, tolerant, impatient, frustrated, angry. 
+	
+Humboldt has patience. Humboldt is accepting.
+	
+Patience rules is a rulebook. [Writing §19. Rulebooks - §19.2, §19.3, §19.8]
 
-Instead of telling Humboldt about "workshop": try asking Humboldt about it.
-Instead of telling Humboldt about "time machine": try asking Humboldt about it.
+A patience rule:
+	if the patience of Humboldt is:
+		-- accepting:
+			now the patience of Humboldt is tolerant;
+		-- tolerant:
+			now the patience of Humboldt is impatient;
+		-- impatient:
+			now the patience of Humboldt is frustrated;
+		-- frustrated:
+			now the patience of Humboldt is angry;
+		-- angry:
+			now the patience of Humboldt is angry.
+	
+Volume - Scenes
 
-[After quizzing Humboldt about Wells: say "ASKING HUMBOLDT ABOUT WELLS."]
-		
-[Instead of asking Humboldt about "wells/madman/patient/lunatic":] 
-After quizzing Humboldt about Wells:
-	say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
+Book - Opening Scene
 
-Instead of asking Humboldt about "workshop/shop": 
-	say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+Opening Scene is a scene.
 
-Instead of asking Humboldt about "time machine": 
-	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'"
+Opening Scene begins when play begins.
+
+When Opening Scene begins: say "OPENING SCENE BEGINS." [Why doesn't this print out?]
+
+Opening Scene ends when player is in the Entryway for the second time.
+
+When Opening Scene ends: say "OPENING SCENE ENDS."
+
+Book - Ending Scene
+
+Ending Scene is a scene.
+
+Ending Scene begins when Opening Scene ends.
+
+When Ending Scene begins: say "ENDING SCENE BEGINS."
+
+When Ending Scene ends: say "ENDING SCENE ENDS."
+
 
