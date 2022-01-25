@@ -24,7 +24,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2736 ]
+[ WORDS - 2893 ]
 
 Volume - Setup
 
@@ -144,7 +144,11 @@ Book - Locations
 The Kitchen is a room. "The Entryway is south."
 The Kitchen is north of the Entryway.
 
-The Entryway is a room. "The Kitchen is north."
+The Entryway is a room. "The Kitchen is north and the Workshop is east."
+	
+The Workshop is a room. "The Entryway is west."
+The Workshop is east of the Entryway.
+Understand "workshop" as Workshop.
 
 Book - The Key
 
@@ -202,6 +206,9 @@ time travel is a subject.
 The time machine is a subject.
 her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
+diagnosis is a subject.
+examination is a subject.
+
 Volume - Characters
 
 Book - Watchett
@@ -238,11 +245,11 @@ After saying goodbye to Watchett when the farewell type is implicit:
 	
 Chapter - In The Kitchen
 
-Section - Requests - "Asking For [something]"
+Section - Requests - "Ask [someone] for [thing]"
 
-Instead of requesting Watchett for the key: say "'I'm sorry sir, I don't have it.'"
+After requesting Watchett for the key: say "'I'm sorry sir, I don't have it.'"
 
-Section - Quizzing - "Asking About [something]"
+Section - Quizzing - "Ask [someone] about [thing]"
 
 After quizzing Watchett about Wells: say "[remove Wells ask suggestion][add experiments ask suggestion]'Always working too hard on his experiments, he is. He probably just needs a bit of a rest.'"
 After quizzing Watchett about Humboldt: say "'The doctors has been a friend of Mr. Wells for years. Not as long as you but almost as long.'"
@@ -255,7 +262,6 @@ After quizzing Watchett about the key:
 After quizzing Watchett about workshop-room: 
 	say "[remove workshop-room ask suggestion]";
 	say "'I've never been in there, not even to clean. Mr. Wells had the only key to that door.'"
-
 
 After quizzing Watchett about the workshop-door: [DEL say "[remove workshop-door ask suggestion]'Locked, always locked. Mr. Wells had the only key.'"]
 	say "[remove workshop-door ask suggestion]";
@@ -280,7 +286,7 @@ After quizzing Watchett about time travel:
 	say "[remove time travel ask suggestion]";
 	say "'I wouldn't know anything about that. Running a house, one day at a time, that's my lot in life."
 
-Section - Informing - "Telling About [something]"
+Section - Informing - "Tell [someone] about [thing]"
 
 After informing Watchett about Wells: say "'Very sad,' she says. 'I'm glad the doctor is involved.'"
 After informing Watchett about Humboldt: 
@@ -292,14 +298,14 @@ After informing Watchett about the orrery: say "'Keeps perfect time,' she says. 
 
 After informing Watchett about time travel: say "'That's quite the imagination you have sir. You should consider writing books like that Frenchman Mr. Verne does.'"
 
-Section - Imploring - "Asking For [subject]"
+Section - Imploring - "Ask [someone] for ['text']"
 
 After imploring Watchett for "information": say "'You'll have to more specific, sir.'"
 
 Section - Showing
 
-Instead of showing noun to Watchett: try quizzing Watchett about noun.
-Instead of showing something to Watchett: say "SHOWING [noun]".
+After showing noun to Watchett: try quizzing Watchett about noun.
+After showing something to Watchett: say "SHOWING [noun]".
 
 Chapter - Default Responses
 
@@ -346,37 +352,39 @@ Chapter - Goodbye
 
 Chapter - Opening Scene
 
-Section - Requests - "Asking For [something]"
+Section - Requests - "Ask [someone] for [thing]"
 
-Section - Quizzing - "Asking About [something]"
+Section - Quizzing - "Ask [someone] about [thing]"
 
-After quizzing Humboldt about Wells: say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
-[		say "'He's sedated and resting.'"]
+After quizzing Humboldt about Wells during Opening Scene: say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
+After quizzing Humboldt about Workshop during Opening Scene: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+After quizzing Humboldt about diagnosis during Opening Scene: say "'Too early to tell.'"
+After quizzing Humboldt about examination during Opening Scene: say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
 
-After quizzing Humboldt about the workshop-room: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
-
-After quizzing Humboldt about the time machine: 
-	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'"
-
-Section - Informing - "Telling About [something]"
+Section - Informing - "Tell [someone] about [thing]"
 
 After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
 After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
 After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
 
-Section - Imploring - "Asking For [subjecct]"
+Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
 
 Chapter - Ending Scene
 
-Section - Requests - "Asking For [something]"
+Section - Requests - "Ask [someone] for [thing]"
 
-Section - Quizzing - "Asking About [something]"
+Section - Quizzing - "Ask [someone] about [thing]"
 
-Section - Informing - "Telling About [something]"
+After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and resting.'"
+After quizzing Humboldt about Workshop during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
+After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D."
+After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 
-Section - Imploring - "Asking For [subjecct]"
+Section - Informing - "Tell [someone] about [thing]"
+
+Section - Imploring - "Ask [someone] for ['text']"
 
 Chapter - Default Responses
 
@@ -427,7 +435,7 @@ Opening Scene begins when play begins.
 
 When Opening Scene begins: say "OPENING SCENE BEGINS." [Why doesn't this print out?]
 
-Opening Scene ends when player is in the Entryway for the second time.
+Opening Scene ends when player is in the Workshop.
 
 When Opening Scene ends: say "OPENING SCENE ENDS."
 
