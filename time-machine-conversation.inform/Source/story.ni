@@ -2,8 +2,11 @@ The story title is "time-machine-conversations".
 The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
+To say introduction:
+	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]Currently there are three locations—, the Kitchen, the Entryway, and the Workshop, and two characters, Mrs. Watchett and Dr. Humboldt.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
+
 When play begins:
-	say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";
+	say "[introduction]";
 	open right-sidebar window;
 	open title-characters window;
 	open list-characters window;
@@ -17,6 +20,8 @@ When play begins:
 	now suggest-on-greeting is false;
 	now the player is carrying the pocket watch;
 	now the player is carrying the poker.
+
+[say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";]
 	
 Every turn:
 	if the location of Humboldt is not the location of the player:
