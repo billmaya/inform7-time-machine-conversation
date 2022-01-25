@@ -19,12 +19,16 @@ When play begins:
 	now the player is carrying the poker.
 	
 Every turn:
+	if the location of Humboldt is not the location of the player:
+		if the player is not in the Kitchen:
+			let the way be the best route from the location of Humboldt to the location of the player, using doors;
+			try Humboldt going the way;
 	refresh the list-characters window;
 	refresh the talking-to-character window;
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 2893 ]
+[ WORDS - 3000 ]
 
 Volume - Setup
 
@@ -45,7 +49,7 @@ Part - Setup
 The right-sidebar window is a graphics g-window spawned by the main window.
 The position of the right-sidebar window is g-placeright.
 The scale method of the right-sidebar window is g-fixed-size.
-The measurement of the right-sidebar window is 270.
+The measurement of the right-sidebar window is 290.
 
 The title-characters window is a text grid g-window spawned by the right-sidebar window.
 The position of the title-characters window is g-placeabove.
@@ -90,26 +94,26 @@ The measurement of the list-inventory window is 16.
 Part - Rules
 	
 Rule for refreshing the title-characters window:
-	say "Characters in the Room".
+	say "Characters In The Room".
 	
 Rule for refreshing the list-characters window:
 	say "[list of people that are not player in location of player]".
 
 Rule for refreshing the title-talking-to window:
-	say "Talking To".
+	say "You Are Talking To".
 	
 Rule for refreshing the talking-to-character window:
 	if current interlocutor is not nothing:
 		say current interlocutor.
 	
 Rule for refreshing the title-topics window:
-	say "Topics to Talk About".
+	say "Some Topics To Talk About".
 	
 Rule for refreshing the character-topics window:
 	try listing suggested topics.
 	
 Rule for refreshing the title-inventory window:
-	say "Inventory".
+	say "You Are Carrying".
 	
 Rule for refreshing the list-inventory window:
 	try taking inventory.
@@ -209,6 +213,8 @@ her-work is a subject. Understand "work" or "her work" as her-work. The printed 
 diagnosis is a subject.
 examination is a subject.
 
+information is a subject.
+
 Volume - Characters
 
 Book - Watchett
@@ -248,6 +254,7 @@ Chapter - In The Kitchen
 Section - Requests - "Ask [someone] for [thing]"
 
 After requesting Watchett for the key: say "'I'm sorry sir, I don't have it.'"
+After requesting Watchett for information: say "INFO INFO INFO."
 
 Section - Quizzing - "Ask [someone] about [thing]"
 
@@ -263,7 +270,7 @@ After quizzing Watchett about workshop-room:
 	say "[remove workshop-room ask suggestion]";
 	say "'I've never been in there, not even to clean. Mr. Wells had the only key to that door.'"
 
-After quizzing Watchett about the workshop-door: [DEL say "[remove workshop-door ask suggestion]'Locked, always locked. Mr. Wells had the only key.'"]
+After quizzing Watchett about the workshop-door: 
 	say "[remove workshop-door ask suggestion]";
 	say "'Locked, always locked. Mr. Wells had the only key.'"
 
@@ -300,7 +307,7 @@ After informing Watchett about time travel: say "'That's quite the imagination y
 
 Section - Imploring - "Ask [someone] for ['text']"
 
-After imploring Watchett for "information": say "'You'll have to more specific, sir.'"
+After imploring Watchett for "facts/details/ideas": say "'You'll have to more specific, sir.'"
 
 Section - Showing
 
@@ -330,6 +337,8 @@ Test ask-watchett with "a key / a workshop-room / a workshop-door / a front door
 Test tell-watchett with "t wells / t humboldt / t key / t orrery / t time travel".
 Test ask-for-watchett with "ask watchett for key / ask watchett for information".
 Test show-watchett with "show watchett poker / show watchett pocket watch / show watchett snow".
+
+Test basic-watchett with "say hi to watchett / ask watchett for key / ask watchett about wells / tell watchett about wells / ask watchett for information / ask watchett for experiments / show watch to watchett".
 
 Book - Humboldt 
 
@@ -401,6 +410,10 @@ Chapter - Default Responses
 [Default yes-no response for ]
 
 [Default response for ]
+
+Part - Testing
+
+Test basic-humboldt with "say hi to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination".
 
 Part - Patience
 
