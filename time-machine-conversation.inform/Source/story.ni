@@ -3,7 +3,7 @@ The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
 To say introduction:
-	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]Currently there are three locations—, the Kitchen, the Entryway, and the Workshop, and two characters, Mrs. Watchett and Dr. Humboldt.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
+	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]Currently there are three locations—, the Kitchen, the Entryway, and the Workshop, and two characters, Mrs. Watchett and Dr. Humboldt. Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you when you move from the Entryway to the Workshop and back.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
 
 When play begins:
 	say "[introduction]";
@@ -33,7 +33,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3000 ]
+[ WORDS - 3075 ]
 
 Volume - Setup
 
@@ -371,7 +371,7 @@ Section - Requests - "Ask [someone] for [thing]"
 Section - Quizzing - "Ask [someone] about [thing]"
 
 After quizzing Humboldt about Wells during Opening Scene: say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
-After quizzing Humboldt about Workshop during Opening Scene: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+After quizzing Humboldt about workshop-room during Opening Scene: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
 After quizzing Humboldt about diagnosis during Opening Scene: say "'Too early to tell.'"
 After quizzing Humboldt about examination during Opening Scene: say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
 
@@ -392,7 +392,7 @@ Section - Requests - "Ask [someone] for [thing]"
 Section - Quizzing - "Ask [someone] about [thing]"
 
 After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and resting.'"
-After quizzing Humboldt about Workshop during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
+After quizzing Humboldt about workshop-room during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
 After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D."
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 
