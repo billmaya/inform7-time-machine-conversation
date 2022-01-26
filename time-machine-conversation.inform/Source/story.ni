@@ -33,7 +33,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3075 ]
+[ WORDS - 3387 ]
 
 Volume - Setup
 
@@ -99,7 +99,7 @@ The measurement of the list-inventory window is 16.
 Part - Rules
 	
 Rule for refreshing the title-characters window:
-	say "Characters In The Room".
+	say "You Can Talk To" ["Characters In The Room".]
 	
 Rule for refreshing the list-characters window:
 	say "[list of people that are not player in location of player]".
@@ -374,7 +374,13 @@ After quizzing Humboldt about Wells during Opening Scene: say "'I don't know eno
 After quizzing Humboldt about workshop-room during Opening Scene: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
 After quizzing Humboldt about diagnosis during Opening Scene: say "'Too early to tell.'"
 After quizzing Humboldt about examination during Opening Scene: say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
+After quizzing Humboldt about time machine during Opening Scene: say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
+After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
 
+After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
+
+				
 Section - Informing - "Tell [someone] about [thing]"
 
 After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
@@ -384,6 +390,9 @@ After informing Humboldt about the time machine: try quizzing Humboldt about the
 Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
+
+After showing noun to Humboldt during Opening Scene: try quizzing Humboldt about noun.
+After showing something to Humboldt during Opening Scene: say "SHOWING [noun]".
 
 Chapter - Ending Scene
 
@@ -395,10 +404,21 @@ After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and 
 After quizzing Humboldt about workshop-room during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
 After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D."
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
+After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
+After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
+
+
+After quizzing Humboldt about Humboldt during Ending Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about player during Ending Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
 
 Section - Informing - "Tell [someone] about [thing]"
 
 Section - Imploring - "Ask [someone] for ['text']"
+
+Section - Showing
+
+After showing noun to Humboldt during Ending Scene: try quizzing Humboldt about noun.
+After showing something to Humboldt during Ending Scene: say "SHOWING [noun]".
 
 Chapter - Default Responses
 
