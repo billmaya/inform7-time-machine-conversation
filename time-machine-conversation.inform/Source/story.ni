@@ -33,7 +33,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3387 ]
+[ WORDS - 3617 ]
 
 Volume - Setup
 
@@ -186,6 +186,8 @@ The petal is a thing.
 Food is a thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
 The poker is a thing.
 The newspaper is a thing.
+The blueprints are a thing.
+The fuse is a thing.
 
 xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
 abc-suggestion is a misc-suggestion. The printed name is "say ABC".
@@ -376,10 +378,12 @@ After quizzing Humboldt about diagnosis during Opening Scene: say "'Too early to
 After quizzing Humboldt about examination during Opening Scene: say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
 After quizzing Humboldt about time machine during Opening Scene: say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
 After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
-
+After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
+After quizzing Humboldt about the key during Ending Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
+	
+	
 After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
 After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
-
 				
 Section - Informing - "Tell [someone] about [thing]"
 
@@ -406,6 +410,11 @@ After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you fou
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
 After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
+After quizzing Humboldt about the petal during Ending Scene: say "'You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
+After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [at random]What have you found?'"
+
+After quizzing Humboldt about the blueprints during Ending Scene: say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
+After quizzing Humboldt about the fuse during the Ending Scene: say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
 
 
 After quizzing Humboldt about Humboldt during Ending Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
