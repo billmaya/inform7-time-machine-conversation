@@ -379,7 +379,7 @@ After quizzing Humboldt about examination during Opening Scene: say "'First thin
 After quizzing Humboldt about time machine during Opening Scene: say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
 After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
 After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
-After quizzing Humboldt about the key during Ending Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
+After quizzing Humboldt about the key during Opening Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
 	
 	
 After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
