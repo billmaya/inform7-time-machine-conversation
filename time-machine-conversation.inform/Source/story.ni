@@ -33,7 +33,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3617 ]
+[ WORDS - 3797 ]
 
 Volume - Setup
 
@@ -210,6 +210,11 @@ Food is familiar.
 The poker is familiar.
 The newspaper is familiar.
 
+time travel is familiar.
+Eloi are familiar.
+Weena is familiar.
+Morlocks are familiar.
+
 Volume - Subjects 
 
 experiments are a subject. The printed name is "Wells['] experiments".
@@ -380,8 +385,16 @@ After quizzing Humboldt about time machine during Opening Scene: say "'Nonsense,
 After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
 After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
 After quizzing Humboldt about the key during Opening Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
+
+
+To say figment-imagination: say "'Figment of Wells['] imagination I assume.'"
+To say science-fiction: say "'Science fiction if you ask me.'"
+After quizzing Humboldt about eloi during the Opening Scene: say "[figment-imagination]".
+After quizzing Humboldt about weena during the Opening Scene: say "[figment-imagination]".
+After quizzing Humboldt about morlocks during the Opening Scene: say "[figment-imagination]".
+After quizzing Humboldt about time travel during the Opening Scene: say "[science-fiction]".
 	
-	
+
 After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
 After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
 				
@@ -410,8 +423,16 @@ After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you fou
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
 After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
-After quizzing Humboldt about the petal during Ending Scene: say "'You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
-After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [at random]What have you found?'"
+After quizzing Humboldt about the petal during Ending Scene: say "'I gave that to you earlier. You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
+After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [or]Obviously it[']s the workshop key since we[']re standing in the bloody place. [at random]What have you found?'"
+After quizzing Humboldt about the blueprints during the Ending Scene: say "'Your guess is as good as mind.'"
+After quizzing Humboldt about the fuse during the Ending Scene: say "'Looks like it fits into that contraption Wells has constructed.'"
+
+
+After quizzing Humboldt about eloi during the Ending Scene: say "[figment-imagination]".
+After quizzing Humboldt about weena during the Ending Scene: say "[figment-imagination]".
+After quizzing Humboldt about morlocks during the Ending Scene: say "[figment-imagination]".
+
 
 After quizzing Humboldt about the blueprints during Ending Scene: say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
 After quizzing Humboldt about the fuse during the Ending Scene: say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
