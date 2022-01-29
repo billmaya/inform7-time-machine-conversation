@@ -3,7 +3,7 @@ The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
 To say introduction:
-	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]Currently there are three locations—, the Kitchen, the Entryway, and the Workshop, and two characters, Mrs. Watchett and Dr. Humboldt. Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you when you move from the Entryway to the Workshop and back.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
+	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]There are three locations:[paragraph break]• Kitchen[line break]• Entryway[line break]• Workshop[paragraph break]There are two characters:[paragraph break]• Mrs. Watchett (will always stay in the kitchen)[line break]• Dr. Humboldt. (will follow you from the Entryway to the Workshop and back)[paragraph break]Dr. Humboldt's responses will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
 
 When play begins:
 	say "[introduction]";
@@ -20,8 +20,6 @@ When play begins:
 	now suggest-on-greeting is false;
 	now the player is carrying the pocket watch;
 	now the player is carrying the poker.
-
-[say "This is an attempt at implementing better conversations with various characters from The Time Machine using Eric Eve's conversation extensions. When I'm satisfied with the end result it will be integrated with the existing Time Machine code.[paragraph break]There are only two characters, Watchett and Humboldt, and two locations, Kitchen and Entryway.";]
 	
 Every turn:
 	if the location of Humboldt is not the location of the player:
@@ -33,7 +31,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3797 ]
+[ WORDS - 3885 ]
 
 Volume - Setup
 
@@ -188,6 +186,7 @@ The poker is a thing.
 The newspaper is a thing.
 The blueprints are a thing.
 The fuse is a thing.
+The time machine is a thing.
 
 xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
 abc-suggestion is a misc-suggestion. The printed name is "say ABC".
@@ -210,20 +209,19 @@ Food is familiar.
 The poker is familiar.
 The newspaper is familiar.
 
-time travel is familiar.
-Eloi are familiar.
-Weena is familiar.
-Morlocks are familiar.
-
 Volume - Subjects 
 
 experiments are a subject. The printed name is "Wells['] experiments".
 time travel is a subject.
-The time machine is a subject.
 her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
 diagnosis is a subject.
 examination is a subject.
+	
+time travel is a subject.
+Eloi are a subject.
+Weena is a subject.
+Morlocks are a subject.
 
 information is a subject.
 
@@ -443,11 +441,17 @@ After quizzing Humboldt about player during Ending Scene: say "Perhaps you shoul
 
 Section - Informing - "Tell [someone] about [thing]"
 
+After informing Humboldt about the petal during the Ending Scene: say "'I know all that. But did you find the rest of the flower?'"
+After informing Humboldt about the time machine during the Ending Scene: say "'I'd like to believe that it does what you say it does but we've no proof.'"
+After informing Humboldt about the workshop-room during the Ending Scene: say "Humboldt listens dispassionately as you enthusiastically point out various areas of the workshop, a nonplussed look on his face."
+After informing Humboldt about the fuse during the Ending Scene: say "Humboldt nods slightly as you explain how the fuse is necessary for the time machine[']s operation."
+
+
 Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
 
-After showing noun to Humboldt during Ending Scene: try quizzing Humboldt about noun.
+After showing noun to Humboldt during Ending Scene: try informing Humboldt about noun. [<- Informing, not Quizzing i.e. Tell [someone] about [thing] vs. Ask [someone] about [thing]]
 After showing something to Humboldt during Ending Scene: say "SHOWING [noun]".
 
 Chapter - Default Responses
@@ -501,7 +505,7 @@ Opening Scene is a scene.
 
 Opening Scene begins when play begins.
 
-When Opening Scene begins: say "OPENING SCENE BEGINS." [Why doesn't this print out?]
+When Opening Scene begins: say "OPENING SCENE BEGINS."
 
 Opening Scene ends when player is in the Workshop.
 
