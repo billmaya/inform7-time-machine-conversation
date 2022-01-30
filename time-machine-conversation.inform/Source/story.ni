@@ -31,7 +31,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 3885 ]
+[ WORDS - 4229 ]
 
 Volume - Setup
 
@@ -212,16 +212,20 @@ The newspaper is familiar.
 Volume - Subjects 
 
 experiments are a subject. The printed name is "Wells['] experiments".
-time travel is a subject.
 her-work is a subject. Understand "work" or "her work" as her-work. The printed name of her-work is "her work".
 
 diagnosis is a subject.
 examination is a subject.
-	
+
+future is a subject. [Understand "802,701" or "802,701 A.D." as future.]
 time travel is a subject.
-Eloi are a subject.
-Weena is a subject.
-Morlocks are a subject.
+Eloi are a subject. Understand "eloi" as Eloi.
+Weena is a subject. Understand "weena" as Weena.
+Morlocks are a subject. Understand "morlock" or "morlocks" as Morlocks.
+river is a subject.
+sphinx is a subject.
+dome is a subject. Understand "domed building" as dome.
+shaft is a subject. Understand "tunnels" as shaft.
 
 information is a subject.
 
@@ -390,7 +394,8 @@ To say science-fiction: say "'Science fiction if you ask me.'"
 After quizzing Humboldt about eloi during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about weena during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about morlocks during the Opening Scene: say "[figment-imagination]".
-After quizzing Humboldt about time travel during the Opening Scene: say "[science-fiction]".
+
+After quizzing Humboldt about time travel: say "[science-fiction]".
 	
 
 After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
@@ -426,11 +431,9 @@ After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew 
 After quizzing Humboldt about the blueprints during the Ending Scene: say "'Your guess is as good as mind.'"
 After quizzing Humboldt about the fuse during the Ending Scene: say "'Looks like it fits into that contraption Wells has constructed.'"
 
-
 After quizzing Humboldt about eloi during the Ending Scene: say "[figment-imagination]".
 After quizzing Humboldt about weena during the Ending Scene: say "[figment-imagination]".
 After quizzing Humboldt about morlocks during the Ending Scene: say "[figment-imagination]".
-
 
 After quizzing Humboldt about the blueprints during Ending Scene: say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
 After quizzing Humboldt about the fuse during the Ending Scene: say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
@@ -446,6 +449,41 @@ After informing Humboldt about the time machine during the Ending Scene: say "'I
 After informing Humboldt about the workshop-room during the Ending Scene: say "Humboldt listens dispassionately as you enthusiastically point out various areas of the workshop, a nonplussed look on his face."
 After informing Humboldt about the fuse during the Ending Scene: say "Humboldt nods slightly as you explain how the fuse is necessary for the time machine[']s operation."
 
+After informing Humboldt about time travel during the Ending Scene:
+	say "Humboldt listens as you try to expain your time travel experience in the future as best you can with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+
+After informing Humboldt about the future during the Ending Scene:
+	say "Humboldt listens as you recount your experiences in 802,701 A.D. with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+
+After informing Humboldt about Eloi during the Ending Scene:
+	say "Humboldt listens as you recount your experience with the Eloi with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+
+After informing Humboldt about Weena during the Ending Scene:
+	say "Humboldt listens to you recount your experience with Weena with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+
+After informing Humboldt about Morlocks during the Ending Scene:
+	say "Humboldt listens to you recount your experience with the Morlocks with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+	
+After informing Humboldt about river during the Ending Scene:
+	say "Humboldt listens to you recount your experience at the river with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+
+After informing Humboldt about sphinx during the Ending Scene:
+	say "Humboldt listens to you recount your description of the clearing and the sphinx with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+	
+After informing Humboldt about dome during the Ending Scene:
+	say "Humboldt listens to you recount your description of the domed building with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
+	
+After informing Humboldt about shaft during the Ending Scene:
+	say "Humboldt listens to you recount your description of the shaft and tunnels with a [patience of Humboldt] look on his face.";
+	follow Patience rules.
 
 Section - Imploring - "Ask [someone] for ['text']"
 
