@@ -31,7 +31,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 
-[ WORDS - 4229 ]
+[ WORDS - 4334 ]
 
 Volume - Setup
 
@@ -201,6 +201,7 @@ The key is familiar. The printed name is "workshop key".
 The workshop-room is a familiar thing. Understand "workshop" as workshop-room. The printed name of workshop-room is "workshop".
 The workshop-door is a familiar thing. Understand "workshop door" as workshop-door.
 The front door is a familiar thing.
+The blueprints are a familiar thing.
 
 The pocket watch is familiar.
 The orrery is familiar.
@@ -373,7 +374,30 @@ Chapter - Hello
 
 Chapter - Goodbye
 
-Chapter - Opening Scene
+Chapter - Both Opening & Ending Scenes
+
+Section - Requests - "Ask [someone] for [thing]"
+
+Section - Informing - "Tell [someone] about [thing]"
+	
+To say science-fiction: say "'Science fiction if you ask me.'"
+After quizzing Humboldt about time travel: say "[science-fiction]".
+After quizzing Humboldt about the poker: say "'Where did you get that?'" [Why does this give "Humboldt does not respond" in Ending Scene?]
+	
+After quizzing Humboldt about Humboldt: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about player: say "Perhaps you should focus on the situation at hand instead of yourself."
+
+Section - Quizzing - "Ask [someone] about [thing]"
+	
+Section - Imploring - "Ask [someone] for ['text']"
+	
+After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
+After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
+After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
+
+Section - Showing
+
+Chapter - Opening Scene Only
 
 Section - Requests - "Ask [someone] for [thing]"
 
@@ -388,24 +412,15 @@ After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks lik
 After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
 After quizzing Humboldt about the key during Opening Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
 
-
 To say figment-imagination: say "'Figment of Wells['] imagination I assume.'"
-To say science-fiction: say "'Science fiction if you ask me.'"
 After quizzing Humboldt about eloi during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about weena during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about morlocks during the Opening Scene: say "[figment-imagination]".
-
-After quizzing Humboldt about time travel: say "[science-fiction]".
 	
-
-After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
-After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
+[After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."]
 				
 Section - Informing - "Tell [someone] about [thing]"
-
-After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
-After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
-After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
 
 Section - Imploring - "Ask [someone] for ['text']"
 
@@ -414,7 +429,7 @@ Section - Showing
 After showing noun to Humboldt during Opening Scene: try quizzing Humboldt about noun.
 After showing something to Humboldt during Opening Scene: say "SHOWING [noun]".
 
-Chapter - Ending Scene
+Chapter - Ending Scene Only
 
 Section - Requests - "Ask [someone] for [thing]"
 
@@ -438,9 +453,8 @@ After quizzing Humboldt about morlocks during the Ending Scene: say "[figment-im
 After quizzing Humboldt about the blueprints during Ending Scene: say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
 After quizzing Humboldt about the fuse during the Ending Scene: say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
 
-
-After quizzing Humboldt about Humboldt during Ending Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
-After quizzing Humboldt about player during Ending Scene: say "Perhaps you should focus on the situation at hand instead of yourself."
+[After quizzing Humboldt about Humboldt during Ending Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about player during Ending Scene: say "Perhaps you should focus on the situation at hand instead of yourself."]
 
 Section - Informing - "Tell [someone] about [thing]"
 
