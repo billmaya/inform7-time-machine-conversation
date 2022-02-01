@@ -26,11 +26,15 @@ Every turn:
 		if the player is not in the Kitchen:
 			let the way be the best route from the location of Humboldt to the location of the player, using doors;
 			try Humboldt going the way;
+	if current interlocutor is not nothing:
+		say "I'M TALKING TO SOMEONE.";
+		[The was-talking-to is an object that varies;
+		now was-talking-to is the current interlocutor;]
 	refresh the list-characters window;
 	refresh the talking-to-character window;
 	refresh the character-topics window;
 	refresh the list-inventory window.
-
+	
 [ WORDS - 4334 ]
 
 Volume - Setup
