@@ -3,7 +3,7 @@ The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
 To say introduction:
-	say "This mini-game is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0.[paragraph break]There are three locations:[paragraph break]• Kitchen[line break]• Entryway[line break]• Workshop[paragraph break]There are two characters:[paragraph break]• Mrs. Watchett (will always stay in the kitchen)[line break]• Dr. Humboldt. (will follow you from the Entryway to the Workshop and back)[paragraph break]Dr. Humboldt's responses will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but should say 'hello' to them before starting a conversation."
+	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations in this experiment:[paragraph break]• Kitchen[line break]• Entryway[line break]• Workshop[paragraph break]There are two characters in this experiment:[paragraph break]• Mrs. Watchett[line break]• Dr. Humboldt[paragraph break]Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you as you travel between the Entryway and the Workshop.[paragraph break]Dr. Humboldt's responses will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them before starting a conversation (it is not required though)."
 
 When play begins:
 	say "[introduction]";
@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4362 4334 ]
+[ WORDS - 4646 ]
 
 Volume - Setup
 
@@ -201,7 +201,7 @@ Book - Familiarity
 
 Wells is a familiar man.
 Humboldt is a familiar man.
-Watchett is a familiar woman. [Test with > ask/tell humboldt about watchett and see what happens. = Dr. Humboldt does not respond]
+Watchett is a familiar woman. [If commented out = "Dr. Humboldt does not respond."]
 
 The key is familiar. The printed name is "workshop key".
 The workshop-room is a familiar thing. Understand "workshop" as workshop-room. The printed name of workshop-room is "workshop".
@@ -428,9 +428,6 @@ To say figment-imagination: say "'Figment of Wells['] imagination I assume.'"
 After quizzing Humboldt about eloi during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about weena during the Opening Scene: say "[figment-imagination]".
 After quizzing Humboldt about morlocks during the Opening Scene: say "[figment-imagination]".
-	
-[After quizzing Humboldt about Humboldt during Opening Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
-After quizzing Humboldt about player during Opening Scene: say "Perhaps you should focus on the situation at hand instead of yourself."]
 				
 Section - Informing - "Tell [someone] about [thing]"
 
@@ -581,11 +578,11 @@ Opening Scene is a scene.
 
 Opening Scene begins when play begins.
 
-When Opening Scene begins: say "OPENING SCENE BEGINS."
+[When Opening Scene begins: say "OPENING SCENE BEGINS."]
 
 Opening Scene ends when player is in the Workshop.
 
-When Opening Scene ends: say "OPENING SCENE ENDS."
+[When Opening Scene ends: say "OPENING SCENE ENDS."]
 
 Book - Ending Scene
 
@@ -593,8 +590,8 @@ Ending Scene is a scene.
 
 Ending Scene begins when Opening Scene ends.
 
-When Ending Scene begins: say "ENDING SCENE BEGINS."
+[When Ending Scene begins: say "ENDING SCENE BEGINS."]
 
-When Ending Scene ends: say "ENDING SCENE ENDS."
+[When Ending Scene ends: say "ENDING SCENE ENDS."]
 
 
