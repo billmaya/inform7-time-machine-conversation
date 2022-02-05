@@ -19,6 +19,7 @@ When play begins:
 	[refresh the list-inventory window; [??? - does not work]]
 	now suggest-on-greeting is false;
 	now the player is carrying the pocket watch;
+	now the player is carrying the petal;
 	now the player is carrying the poker.
 	
 Every turn:
@@ -26,16 +27,17 @@ Every turn:
 		if the player is not in the Kitchen:
 			let the way be the best route from the location of Humboldt to the location of the player, using doors;
 			try Humboldt going the way;
-	if current interlocutor is not nothing:
-		say "I'M TALKING TO SOMEONE.";
-		[The was-talking-to is an object that varies;
-		now was-talking-to is the current interlocutor;]
+	[if current interlocutor is not nothing:]
+		[say "I'M TALKING TO SOMEONE.";]
+		[XYZ is the current interlocutor;]
+		[xyz is a character variable;]
+		[now was-talking-to is the current interlocutor;]
 	refresh the list-characters window;
 	refresh the talking-to-character window;
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4334 ]
+[ WORDS - 4362 4334 ]
 
 Volume - Setup
 
@@ -101,7 +103,7 @@ The measurement of the list-inventory window is 16.
 Part - Rules
 	
 Rule for refreshing the title-characters window:
-	say "You Can Talk To" ["Characters In The Room".]
+	say "You Can Say Hello To". ["You Can Talk To"] ["Characters In The Room".]
 	
 Rule for refreshing the list-characters window:
 	say "[list of people that are not player in location of player]".
@@ -199,7 +201,7 @@ Book - Familiarity
 
 Wells is a familiar man.
 Humboldt is a familiar man.
-[Watchett is a familiar woman.] [Test with > tell humboldt about watchett and see what happens. ]
+Watchett is a familiar woman. [Test with > ask/tell humboldt about watchett and see what happens. = Dr. Humboldt does not respond]
 
 The key is familiar. The printed name is "workshop key".
 The workshop-room is a familiar thing. Understand "workshop" as workshop-room. The printed name of workshop-room is "workshop".
@@ -382,24 +384,30 @@ Chapter - Both Opening & Ending Scenes
 
 Section - Requests - "Ask [someone] for [thing]"
 
-Section - Informing - "Tell [someone] about [thing]"
+Section - Quizzing - "Ask [someone] about [thing]"
 	
 To say science-fiction: say "'Science fiction if you ask me.'"
 After quizzing Humboldt about time travel: say "[science-fiction]".
-After quizzing Humboldt about the poker: say "'Where did you get that?'" [Why does this give "Humboldt does not respond" in Ending Scene?]
+
+After quizzing Humboldt about the poker: say "'Where did you get that?'"
 	
 After quizzing Humboldt about Humboldt: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
 After quizzing Humboldt about player: say "Perhaps you should focus on the situation at hand instead of yourself."
+After quizzing Humboldt about Watchett: say "I think she is in the kitchen."
 
-Section - Quizzing - "Ask [someone] about [thing]"
-	
-Section - Imploring - "Ask [someone] for ['text']"
+Section - Informing - "Tell [someone] about [thing]"	
 	
 After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
-After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
+After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun. [break into Opening Scene and Ending Scene]
 After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
+	
+Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
+	
+Section - Testing
+	
+Test both-humboldt with "say hello to humboldt / ask humboldt about time travel / ask humboldt about poker / ask humboldt about himself / ask humboldt about watchettt / ask humboldt about self / tell humboldt about wells / tell humboldt about workshop / tell humboldt about time machine".
 
 Chapter - Opening Scene Only
 
@@ -433,6 +441,10 @@ Section - Showing
 After showing noun to Humboldt during Opening Scene: try quizzing Humboldt about noun.
 After showing something to Humboldt during Opening Scene: say "SHOWING [noun]".
 
+Section - Testing
+
+Test open-humboldt with "say hello to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination / ask humboldt about time machine / ask humboldt about pocket watch / ask humboldt about petal / ask humboldt about key / ask humboldt about eloi / ask humboldt about  weena / ask humboldt about morlocks / show poker to humboldt / show pocket watch to humboldt / show petal to humboldt".
+
 Chapter - Ending Scene Only
 
 Section - Requests - "Ask [someone] for [thing]"
@@ -441,7 +453,7 @@ Section - Quizzing - "Ask [someone] about [thing]"
 
 After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and resting.'"
 After quizzing Humboldt about workshop-room during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
-After quizzing Humboldt about diagnosis during Ending Scene: say "Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D."
+After quizzing Humboldt about diagnosis during Ending Scene: say "'Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D.'"
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
 After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
@@ -510,6 +522,12 @@ Section - Showing
 After showing noun to Humboldt during Ending Scene: try informing Humboldt about noun. [<- Informing, not Quizzing i.e. Tell [someone] about [thing] vs. Ask [someone] about [thing]]
 After showing something to Humboldt during Ending Scene: say "SHOWING [noun]".
 
+Section - Testing
+
+Test end-humboldt with "say hello to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination / ask humboldt about time machine / ask humboldt about pocket watch / ask humboldt about petal / ask humboldt about key / ask humboldt about fuse / ask humboldt about blueprints / ask humboldt about eloi / ask humboldt about  weena / ask humboldt about morlocks / show poker to humboldt / show pocket watch to humboldt / show petal to humboldt / tell humboldt about petal / tell humboldt about time machine / tell humboldt about workshop / tell humboldt about fuse".
+
+Test patience-humboldt with "say hello to humboldt / tell humboldt about time travel / tell humboldt about future / tell humboldt about eloi / tell humboldt about weena / tell humboldt about morlocks / tell humboldt about river / tell humboldt about sphinx / tell humboldt about dome / tell humboldt about shaft / tell humboldt about tunnels".
+
 Chapter - Default Responses
 
 [Default ask response for ]
@@ -529,6 +547,8 @@ Chapter - Default Responses
 Part - Testing
 
 Test basic-humboldt with "say hi to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination".
+
+
 
 Part - Patience
 
