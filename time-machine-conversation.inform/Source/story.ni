@@ -215,6 +215,8 @@ The petal is familiar.
 Food is familiar.
 The poker is familiar.
 The newspaper is familiar.
+The time machine is familiar.
+The fuse is familiar.
 
 Volume - Subjects 
 
@@ -407,7 +409,7 @@ Section - Showing
 	
 Section - Testing
 	
-Test both-humboldt with "say hello to humboldt / ask humboldt about time travel / ask humboldt about poker / ask humboldt about himself / ask humboldt about watchettt / ask humboldt about self / tell humboldt about wells / tell humboldt about workshop / tell humboldt about time machine".
+Test both-humboldt with "say hello to humboldt / ask humboldt about time travel / ask humboldt about poker / ask humboldt about himself / ask humboldt about watchett / ask humboldt about self / tell humboldt about wells / tell humboldt about workshop / tell humboldt about time machine".
 
 Chapter - Opening Scene Only
 
