@@ -397,8 +397,8 @@ After quizzing Humboldt about Watchett: say "I think she is in the kitchen."
 
 Section - Informing - "Tell [someone] about [thing]"	
 	
-After informing Humboldt about Wells: say "I KNOW I KNOW ALL ABOUT IT."
-After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun. [break into Opening Scene and Ending Scene]
+After informing Humboldt about Wells: say "Humboldt gives you an increduous look as he listens to your learned but laymans opinion on Wells's condition." [DEL "I KNOW I KNOW ALL ABOUT IT."]
+After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun. [DEL break into Opening Scene and Ending Scene]
 After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
 	
 Section - Imploring - "Ask [someone] for ['text']"
@@ -440,7 +440,7 @@ After showing something to Humboldt during Opening Scene: say "SHOWING [noun]".
 
 Section - Testing
 
-Test open-humboldt with "say hello to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination / ask humboldt about time machine / ask humboldt about pocket watch / ask humboldt about petal / ask humboldt about key / ask humboldt about eloi / ask humboldt about  weena / ask humboldt about morlocks / show poker to humboldt / show pocket watch to humboldt / show petal to humboldt".
+Test open-humboldt with "say hello to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination / ask humboldt about time machine / ask humboldt about pocket watch / ask humboldt about petal / ask humboldt about key / ask humboldt about eloi / ask humboldt about  weena / ask humboldt about morlocks / show pocket watch to humboldt / show petal to humboldt / show key to humboldt".
 
 Chapter - Ending Scene Only
 
@@ -450,7 +450,7 @@ Section - Quizzing - "Ask [someone] about [thing]"
 
 After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and resting.'"
 After quizzing Humboldt about workshop-room during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
-After quizzing Humboldt about diagnosis during Ending Scene: say "'Unless you found some new evidence it doesn't look good for Wells. He still believes he travelled to the year 802,701 A.D.'"
+After quizzing Humboldt about diagnosis during Ending Scene: say "'Unless you found some new evidence it doesn't look good for Wells. He still insists he travelled to the year 802,701 A.D.'"
 After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
 After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
@@ -551,12 +551,15 @@ Part - Patience
 
 [Writing §4.9. Using new kinds of value in properties]
 patience is a kind of a value.
-The patiences are accepting, tolerant, impatient, frustrated, angry. 
-	
-Humboldt has patience. Humboldt is accepting.
-	
+
+Humboldt has patience.
+
 Patience rules is a rulebook. [Writing §19. Rulebooks - §19.2, §19.3, §19.8]
 
+The patiences are accepting, tolerant, impatient, frustrated, angry.
+
+Humboldt is accepting.
+	
 A patience rule:
 	if the patience of Humboldt is:
 		-- accepting:
@@ -569,6 +572,35 @@ A patience rule:
 			now the patience of Humboldt is angry;
 		-- angry:
 			now the patience of Humboldt is angry.
+
+[ For testing purposed
+The patiences are trustworthy, loyal, helpful, friendly, courteous, obedient, cheerful, thrifty, brave, clean, reverent. [Inform 7 doesn't like "kind"]
+
+Humboldt is trustworthy.	
+
+A patience rule:
+	if the patience of Humboldt is:
+		-- trustworthy:
+			now the patience of Humboldt is loyal;
+		-- loyal:
+			now the patience of Humboldt is helpful;
+		-- helpful:
+			now the patience of Humboldt is friendly;
+		-- friendly:
+			now the patience of Humboldt is courteous;
+		-- courteous:
+			now the patience of humboldt is obedient;
+		-- obedient:
+			now the patience of humboldt is cheerful; 
+		-- cheerful:
+			now the patience of humboldt is thrifty;
+		-- thrifty:
+			now the patience of humboldt is brave;
+		-- brave:
+			now the patience of humboldt is clean;
+		-- clean:
+			now the patience of humboldt is reverent.
+]
 	
 Volume - Scenes
 
