@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4646 ]
+[ WORDS - 4813 4646 ]
 
 Volume - Setup
 
@@ -399,13 +399,16 @@ After quizzing Humboldt about Watchett: say "I think she is in the kitchen."
 
 Section - Informing - "Tell [someone] about [thing]"	
 	
-After informing Humboldt about Wells: say "Humboldt gives you an increduous look as he listens to your learned but laymans opinion on Wells's condition." [DEL "I KNOW I KNOW ALL ABOUT IT."]
-After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun. [DEL break into Opening Scene and Ending Scene]
+After informing Humboldt about Wells: say "Humboldt gives you an increduous look as he listens to your learned but laymans opinion on Wells's condition."
+After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
 After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
-	
+
 Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
+	
+After showing noun to Humboldt: try quizzing Humboldt about noun.
+After showing something to Humboldt: say "SHOWING [noun]".
 	
 Section - Testing
 	
@@ -519,7 +522,7 @@ Section - Imploring - "Ask [someone] for ['text']"
 
 Section - Showing
 
-After showing noun to Humboldt during Ending Scene: try informing Humboldt about noun. [<- Informing, not Quizzing i.e. Tell [someone] about [thing] vs. Ask [someone] about [thing]]
+After showing noun to Humboldt during Ending Scene: try quizzing Humboldt about noun. 
 After showing something to Humboldt during Ending Scene: say "SHOWING [noun]".
 
 Section - Testing
