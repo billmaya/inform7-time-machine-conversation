@@ -116,7 +116,7 @@ Rule for refreshing the talking-to-character window:
 		say current interlocutor.
 	
 Rule for refreshing the title-topics window:
-	say "Some Topics To Talk About".
+	say "Some Things To Talk About".
 	
 Rule for refreshing the character-topics window:
 	try listing suggested topics.
