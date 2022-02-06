@@ -477,6 +477,7 @@ After informing Humboldt about the petal during the Ending Scene: say "'I know a
 After informing Humboldt about the time machine during the Ending Scene: say "'I'd like to believe that it does what you say it does but we've no proof.'"
 After informing Humboldt about the workshop-room during the Ending Scene: say "Humboldt listens dispassionately as you enthusiastically point out various areas of the workshop, a nonplussed look on his face."
 After informing Humboldt about the fuse during the Ending Scene: say "Humboldt nods slightly as you explain how the fuse is necessary for the time machine[']s operation."
+After informing Humboldt about the pocket watch during the Ending Scene: say "Humboldt nods slightly as you show him Wells['] pocket watch."
 
 After informing Humboldt about time travel during the Ending Scene:
 	say "Humboldt listens as you try to expain your time travel experience in the future as best you can with a [patience of Humboldt] look on his face.";
