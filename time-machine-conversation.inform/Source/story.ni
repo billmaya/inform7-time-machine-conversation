@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4844 ]
+[ WORDS - 4934 4844 ]
 
 Volume - Setup
 
@@ -386,6 +386,12 @@ Part - Conversation
 
 Chapter - Hello
 
+After saying hello to Humboldt when the greeting type is explicit or the greeting type is implicit: 
+	if the Ending Scene is happening:
+		say "ENDING SCENE RUNNING.";
+	if the Opening Scene is happening:
+		say "OPENING SCENE RUNNING."
+
 Chapter - Goodbye
 
 Chapter - Both Opening & Ending Scenes
@@ -617,7 +623,7 @@ Test patience-humboldt with "say hello to humboldt / tell humboldt about time tr
 Chapter - Default Responses
 
 Default ask response for Humboldt:
-	say "Thinking for a moment, he replies, 'XYZ'."
+	say "Thinking for a moment, he replies 'XYZ.'"
 	
 [Default answer response for ]
 
@@ -702,7 +708,7 @@ Book - Opening Scene
 
 Opening Scene is a scene.
 
-Opening Scene begins when play begins.
+Opening Scene begins when the player is in the Entryway.
 
 [When Opening Scene begins: say "OPENING SCENE BEGINS."]
 
@@ -714,14 +720,16 @@ Book - Ending Scene
 
 Ending Scene is a scene.
 
-Ending Scene begins when Opening Scene ends.
+Ending Scene begins when the player is in the Workshop. [DEL Opening Scene ends.]
 
 [When Ending Scene begins:]
-	[say "[add time machine ask suggestion]".] [Throws run-time error]
+	[say "[add time machine ask suggestion]". [Compiles but throws run-time error]]
 	[say "ENDING SCENE BEGINS."]
 
+Ending Scene ends when the player is in the Entryway.
+
 [When Ending Scene ends:] 
-	[say "[remove time machine ask suggestion]".] [Throws run-time error]
+	[say "[remove time machine ask suggestion]". [Compiles but throws run-time error]]
 	[say "ENDING SCENE ENDS."]
 
 
