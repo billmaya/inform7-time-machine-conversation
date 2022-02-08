@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4934 4844 ]
+[ WORDS - 4990 ]
 
 Volume - Setup
 
@@ -720,7 +720,7 @@ Book - Ending Scene
 
 Ending Scene is a scene.
 
-Ending Scene begins when the player is in the Workshop. [DEL Opening Scene ends.]
+Ending Scene begins when the player is in the Workshop. 
 
 [When Ending Scene begins:]
 	[say "[add time machine ask suggestion]". [Compiles but throws run-time error]]
