@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4894 ]
+[ WORDS - 4844 ]
 
 Volume - Setup
 
@@ -455,7 +455,8 @@ After quizzing Humboldt about pocket watch during Opening Scene:
 	say "[remove pocket watch ask suggestion]";
 	say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
 
-After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
+After quizzing Humboldt about the petal during Opening Scene: 
+	say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
 
 After quizzing Humboldt about the key during Opening Scene: 
 	say "[remove key ask suggestion]";
@@ -494,34 +495,62 @@ Section - Requests - "Ask [someone] for [thing]"
 
 Section - Quizzing - "Ask [someone] about [thing]"
 
-After quizzing Humboldt about Wells during Ending Scene: say "'He's sedated and resting.'"
-After quizzing Humboldt about workshop-room during Ending Scene: say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
-After quizzing Humboldt about diagnosis during Ending Scene: say "'Unless you found some new evidence it doesn't look good for Wells. He still insists he travelled to the year 802,701 A.D.'"
-After quizzing Humboldt about examination during Ending Scene: say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
-After quizzing Humboldt about time machine during Ending Scene: say "'Outside my area of expertise, I'm afraid.'"
-After quizzing Humboldt about pocket watch during Ending Scene: say "'I[']m glad to see that you have held onto Wells['] watch.'"
-After quizzing Humboldt about the petal during Ending Scene: say "'I gave that to you earlier. You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
+After quizzing Humboldt about Wells during Ending Scene: 
+	say "'He's sedated and resting.'"
+
+After quizzing Humboldt about workshop-room during Ending Scene: 
+	say "Humboldt looks around the workshop. He examines [one of]some machinery[or]some tools[or]the blackboard equations[or]the blackboard diagrams[or]the workbench[or]the time machine[at random]. '[one of]Interesting[or]Fascinating[or]Hmm[or]That's odd[at random]' is his only comment."
+
+After quizzing Humboldt about diagnosis during Ending Scene: 
+	say "'Unless you found some new evidence it doesn't look good for Wells. He still insists he travelled to the year 802,701 A.D.'"
+
+After quizzing Humboldt about examination during Ending Scene: 
+	say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
+
+After quizzing Humboldt about time machine during Ending Scene: 
+	say "'Outside my area of expertise, I'm afraid.'"
+
+After quizzing Humboldt about pocket watch during Ending Scene: 
+	say "'I[']m glad to see that you have held onto Wells['] watch.'"
+
+After quizzing Humboldt about the petal during Ending Scene: 
+	say "'I gave that to you earlier. You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
+
 After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [or]Obviously it[']s the workshop key since we[']re standing in the bloody place. [at random]What have you found?'"
 After quizzing Humboldt about the blueprints during the Ending Scene: say "'Your guess is as good as mind.'"
 After quizzing Humboldt about the fuse during the Ending Scene: say "'Looks like it fits into that contraption Wells has constructed.'"
 
-After quizzing Humboldt about eloi during the Ending Scene: say "[figment-imagination]".
-After quizzing Humboldt about weena during the Ending Scene: say "[figment-imagination]".
-After quizzing Humboldt about morlocks during the Ending Scene: say "[figment-imagination]".
+After quizzing Humboldt about eloi during the Ending Scene:
+	say "[figment-imagination]".
 
-After quizzing Humboldt about the blueprints during Ending Scene: say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
-After quizzing Humboldt about the fuse during the Ending Scene: say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
+After quizzing Humboldt about weena during the Ending Scene:
+	say "[figment-imagination]".
 
-[After quizzing Humboldt about Humboldt during Ending Scene: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
-After quizzing Humboldt about player during Ending Scene: say "Perhaps you should focus on the situation at hand instead of yourself."]
+After quizzing Humboldt about morlocks during the Ending Scene:
+	say "[figment-imagination]".
+
+After quizzing Humboldt about the blueprints during Ending Scene: 
+	say "Humboldt takes the blueprints and walks over to the time machine. Shuffling the pages he manages to tie each blueprint diagram with its counterpart on the physical machine. After satisfying himself he returns the blueprints to you. 'Impressive workmanship. But there's no proof that it does what Wells says it does,' he says."
+
+After quizzing Humboldt about the fuse during the Ending Scene: 
+	say "Humbold briefly examines the fuse, turning it over in his hands, before returning it to you." [BURNT OUT vs. WORKING ?]
 
 Section - Informing - "Tell [someone] about [thing]"
 
-After informing Humboldt about the petal during the Ending Scene: say "'I know all that. But did you find the rest of the flower?'"
-After informing Humboldt about the time machine during the Ending Scene: say "'I'd like to believe that it does what you say it does but we've no proof.'"
-After informing Humboldt about the workshop-room during the Ending Scene: say "Humboldt listens dispassionately as you enthusiastically point out various areas of the workshop, a nonplussed look on his face."
-After informing Humboldt about the fuse during the Ending Scene: say "Humboldt nods slightly as you explain how the fuse is necessary for the time machine[']s operation."
-After informing Humboldt about the pocket watch during the Ending Scene: say "Humboldt nods slightly as you show him Wells['] pocket watch."
+After informing Humboldt about the petal during the Ending Scene: 
+	say "'I know all that. But did you find the rest of the flower?'"
+
+After informing Humboldt about the time machine during the Ending Scene:
+	say "'I'd like to believe that it does what you say it does but we've no proof.'"
+
+After informing Humboldt about the workshop-room during the Ending Scene: 
+	say "Humboldt listens dispassionately as you enthusiastically point out various areas of the workshop, a nonplussed look on his face."
+
+After informing Humboldt about the fuse during the Ending Scene: 
+	say "Humboldt nods slightly as you explain how the fuse is necessary for the time machine[']s operation."
+
+After informing Humboldt about the pocket watch during the Ending Scene: 
+	say "Humboldt nods slightly as you show him Wells['] pocket watch."
 
 After informing Humboldt about time travel during the Ending Scene:
 	say "Humboldt listens as you try to expain your time travel experience in the future as best you can with a [patience of Humboldt] look on his face.";
