@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4798 ]
+[ WORDS - 4894 ]
 
 Volume - Setup
 
@@ -372,7 +372,7 @@ The printed name of Humboldt is "Dr. Humboldt".
 
 Part - Suggestions
 
-The ask-suggestions are { Wells }.
+The ask-suggestions are { Wells, workshop-room, pocket watch, time travel, self-suggestion }.
 [The tell-suggestions are {  }.]
 [The other-suggestions are {  }.]
 
@@ -389,11 +389,20 @@ Section - Requests - "Ask [someone] for [thing]"
 Section - Quizzing - "Ask [someone] about [thing]"
 	
 To say science-fiction: say "'Science fiction if you ask me.'"
-After quizzing Humboldt about time travel: say "[science-fiction]".
+
+After quizzing Humboldt about time travel:
+	say "[remove time travel ask suggestion]";
+	say "[add Eloi ask suggestion]";
+	say "[add Weena ask suggestion]";
+	say "[add Morlocks ask suggestion]";
+	say "[science-fiction]".
 
 After quizzing Humboldt about the poker: say "'Where did you get that?'"
 	
-After quizzing Humboldt about Humboldt: say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+After quizzing Humboldt about Humboldt: 
+	say "[remove self-suggestion ask suggestion]";
+	say "Dr. Humboldt is much too professional and polite to start rambling on about himself, especially in this sort of situation."
+
 After quizzing Humboldt about player: say "Perhaps you should focus on the situation at hand instead of yourself."
 After quizzing Humboldt about Watchett: say "I think she is in the kitchen."
 
@@ -420,19 +429,51 @@ Section - Requests - "Ask [someone] for [thing]"
 
 Section - Quizzing - "Ask [someone] about [thing]"
 
-After quizzing Humboldt about Wells during Opening Scene: say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
-After quizzing Humboldt about workshop-room during Opening Scene: say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
-After quizzing Humboldt about diagnosis during Opening Scene: say "'Too early to tell.'"
-After quizzing Humboldt about examination during Opening Scene: say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
-After quizzing Humboldt about time machine during Opening Scene: say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
-After quizzing Humboldt about pocket watch during Opening Scene: say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
+After quizzing Humboldt about Wells during Opening Scene: 
+	say "[remove Wells ask suggestion]";
+	say "[add diagnosis ask suggestion]";
+	say "[add examination ask suggestion]";
+	say "'I don't know enough to make a proper diagnosis right now. I'll know more after we get him to the hospital, calm him down, and do a proper examination.'"
+	
+After quizzing Humboldt about workshop-room during Opening Scene: 
+	say "[remove workshop-room ask suggestion]";
+	say "[add key ask suggestion]";
+	say "'Never seen the inside of it. I don't think anyone has. Best to ask Mrs. Watchett. She might have a key.'"
+	
+After quizzing Humboldt about diagnosis during Opening Scene: 
+	say "[remove diagnosis ask suggestion]";
+	say "'Too early to tell.'"
+
+After quizzing Humboldt about examination during Opening Scene: 
+	say "[remove examination ask suggestion]";
+	say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
+
+After quizzing Humboldt about time machine during Opening Scene: 
+	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
+
+After quizzing Humboldt about pocket watch during Opening Scene:
+	say "[remove pocket watch ask suggestion]";
+	say "'Looks like Wells['] watch. I[']ll have my hands full with him so why don't you hold onto it until we get back.'"
+
 After quizzing Humboldt about the petal during Opening Scene: say "'You going to find the rest of it so we can convince Wells that his story is nonsense, a figment of his imagination.'"
-After quizzing Humboldt about the key during Opening Scene: say "'You[']ll have to ask Mrs. Watchett about that.'"
+
+After quizzing Humboldt about the key during Opening Scene: 
+	say "[remove key ask suggestion]";
+	say "'You[']ll have to ask Mrs. Watchett about that.'"
 
 To say figment-imagination: say "'Figment of Wells['] imagination I assume.'"
-After quizzing Humboldt about eloi during the Opening Scene: say "[figment-imagination]".
-After quizzing Humboldt about weena during the Opening Scene: say "[figment-imagination]".
-After quizzing Humboldt about morlocks during the Opening Scene: say "[figment-imagination]".
+
+After quizzing Humboldt about Eloi during the Opening Scene:
+	say "[remove Eloi ask suggestion]";
+	say "[figment-imagination]".
+
+After quizzing Humboldt about Weena during the Opening Scene:
+	say "[remove Weena ask suggestion]";
+	say "[figment-imagination]".
+
+After quizzing Humboldt about Morlocks during the Opening Scene:
+	say "[remove Morlocks ask suggestion]";
+	say "[figment-imagination]".
 				
 Section - Informing - "Tell [someone] about [thing]"
 
