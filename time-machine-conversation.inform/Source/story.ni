@@ -3,7 +3,7 @@ The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
 To say introduction:
-	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations in this experiment:[paragraph break]• Kitchen[line break]• Entryway[line break]• Workshop[paragraph break]There are two characters in this experiment:[paragraph break]• Mrs. Watchett[line break]• Dr. Humboldt[paragraph break]Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you as you travel between the Entryway and the Workshop.[paragraph break]Dr. Humboldt's responses will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them before starting a conversation (it is not required though)."
+	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations in this experiment:[paragraph break]• Kitchen[line break]• Entryway[line break]• Workshop[paragraph break]There are two characters in this experiment:[paragraph break]• Mrs. Watchett[line break]• Dr. Humboldt[paragraph break]Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you as you travel between the Entryway and the Workshop.[paragraph break]Dr. Humboldt's responses will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them before starting a conversation (it is not required though).[paragraph break]The list of things that you can converse with a character about that will be displayed in the 'Some Things To Talk About' section on the right are just suggestions. You can experiment."
 
 When play begins:
 	say "[introduction]";
@@ -339,17 +339,23 @@ After showing something to Watchett: say "SHOWING [noun]".
 
 Chapter - Default Responses
 
-Default ask response for Watchett: say "[one of]'I'm afraid I don't have much to say about that, sir. Anything else I can help you with?'[or]Thinking for a moment, she replies 'I wouldn't know anything about that, sir.'[at random]"
+Default ask response for Watchett: 
+	say "[one of]'I'm afraid I don't have much to say about that, sir. Anything else I can help you with?'[or]Thinking for a moment, she replies 'I wouldn't know anything about that, sir.'[at random]"
 
 [Default answer response for ]
-Default tell response for Watchett: say "[one of]'That's very interesting, sir.'[or]'I'm not sure I understand what you're talking about, sir.'[at random]"
+
+Default tell response for Watchett: 
+	say "[one of]'That's very interesting, sir.'[or]'I'm not sure I understand what you're talking about, sir.'[at random]"
+
 [Default ask-tell response for ]
 
 [Default give response for ]
 [Default show response for ]
 [Defautl give-show response for ]
 
-Default ask-for response for Watchett: say "'I am afraid I cannot help you with that, sir.'"
+Default ask-for response for Watchett: 
+	say "'I am afraid I cannot help you with that, sir.'"
+
 [Default yes-no response for ]
 
 [Default response for ]
@@ -516,9 +522,14 @@ After quizzing Humboldt about pocket watch during Ending Scene:
 After quizzing Humboldt about the petal during Ending Scene: 
 	say "'I gave that to you earlier. You were supposed to find the rest of it so we could convince Wells that his story was nonsense, a figment of his imagination. Did you find it?'"
 
-After quizzing Humboldt about the key during Ending Scene: say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [or]Obviously it[']s the workshop key since we[']re standing in the bloody place. [at random]What have you found?'"
-After quizzing Humboldt about the blueprints during the Ending Scene: say "'Your guess is as good as mind.'"
-After quizzing Humboldt about the fuse during the Ending Scene: say "'Looks like it fits into that contraption Wells has constructed.'"
+After quizzing Humboldt about the key during Ending Scene:
+	say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [or]Obviously it[']s the workshop key since we[']re standing in the bloody place. [at random]What have you found?'"
+
+After quizzing Humboldt about the blueprints during the Ending Scene:
+	say "'Your guess is as good as mind.'"
+
+After quizzing Humboldt about the fuse during the Ending Scene:
+	say "'Looks like it fits into that contraption Wells has constructed.'"
 
 After quizzing Humboldt about eloi during the Ending Scene:
 	say "[figment-imagination]".
@@ -551,6 +562,8 @@ After informing Humboldt about the fuse during the Ending Scene:
 
 After informing Humboldt about the pocket watch during the Ending Scene: 
 	say "Humboldt nods slightly as you show him Wells['] pocket watch."
+
+Section - Informing - With Patience Rules
 
 After informing Humboldt about time travel during the Ending Scene:
 	say "Humboldt listens as you try to expain your time travel experience in the future as best you can with a [patience of Humboldt] look on his face.";
@@ -603,16 +616,23 @@ Test patience-humboldt with "say hello to humboldt / tell humboldt about time tr
 
 Chapter - Default Responses
 
-[Default ask response for ]
+Default ask response for Humboldt:
+	say "Thinking for a moment, he replies, 'XYZ'."
+	
 [Default answer response for ]
-[Default tell response for ]
+
+Default tell response for Humboldt:
+	say "'That's very interesting...'"
+
 [Default ask-tell response for ]
 
 [Default give response for ]
 [Default show response for ]
 [Defautl give-show response for ]
 
-[Default ask-for response for ]
+Default ask-for response for Humboldt:
+	say "'I[']m afraid I can[']t help you with that.'"
+
 [Default yes-no response for ]
 
 [Default response for ]
@@ -620,8 +640,6 @@ Chapter - Default Responses
 Part - Testing
 
 Test basic-humboldt with "say hi to humboldt / ask humboldt about wells / ask humboldt about workshop / ask humboldt about diagnosis / ask humboldt about examination".
-
-
 
 Part - Patience
 
@@ -698,8 +716,12 @@ Ending Scene is a scene.
 
 Ending Scene begins when Opening Scene ends.
 
-[When Ending Scene begins: say "ENDING SCENE BEGINS."]
+[When Ending Scene begins:]
+	[say "[add time machine ask suggestion]".] [Throws run-time error]
+	[say "ENDING SCENE BEGINS."]
 
-[When Ending Scene ends: say "ENDING SCENE ENDS."]
+[When Ending Scene ends:] 
+	[say "[remove time machine ask suggestion]".] [Throws run-time error]
+	[say "ENDING SCENE ENDS."]
 
 
