@@ -192,7 +192,10 @@ The poker is a thing.
 The newspaper is a thing.
 The blueprints are a thing.
 The fuse is a thing.
+
 The time machine is a thing.
+The time machine is in the Workshop. 
+The printed name of the time machine is "broken time machine".
 
 xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
 abc-suggestion is a misc-suggestion. The printed name is "say ABC".
