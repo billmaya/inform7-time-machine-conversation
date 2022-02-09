@@ -5,11 +5,6 @@ The story headline is "Conversation Experiments for 'The Time Machine'".
 To say introduction:
 	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations and two characters in this experiment:[paragraph break]• Kitchen                    • Mrs. Watchett (will always stay in the Kitchen)[line break]• Entryway                  • Dr. Humboldt (will follow you as you travel from Entryway to Workshop)[line break]• Workshop[paragraph break]Dr. Humboldt's replies will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them first before starting a conversation (it is not required though).[paragraph break]The list of things of some of the things that you can converse with a character about will be displayed in the 'Some Things To Talk About' section on the right. But they are just suggestions, you can experiment with other topics."
 
-[ DEL
-There are two characters in this experiment:[paragraph break]• Mrs. Watchett[line break]• Dr. Humboldt[paragraph break]
-Mrs. Watchett will always stay in the Kitchen while Dr. Humboldt will follow you as you travel between the Entryway and the Workshop.[paragraph break]
-]
-
 When play begins:
 	say "[introduction]";
 	open right-sidebar window;
@@ -42,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 4990 ]
+[ WORDS - 5028 ]
 
 Volume - Setup
 
