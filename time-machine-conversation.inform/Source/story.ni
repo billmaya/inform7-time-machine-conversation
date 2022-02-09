@@ -195,8 +195,13 @@ The petal is a thing.
 Food is a thing. Understand "dinner" or "supper" or "meals" or "meal" as food.
 The poker is a thing.
 The newspaper is a thing.
+
 The blueprints are a thing.
+The blueprints are in the Workshop.
+
 The fuse is a thing.
+The fuse is in the Workshop.
+The printed name of the fuse is "burnt out fuse".
 
 The time machine is a thing.
 The time machine is in the Workshop. 
