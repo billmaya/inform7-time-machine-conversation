@@ -706,7 +706,7 @@ Volume - Scenes
 
 Book - Opening Scene
 
-Opening Scene is a scene.
+Opening Scene is a recurring scene.
 
 Opening Scene begins when the player is in the Entryway.
 
@@ -718,7 +718,7 @@ Opening Scene ends when player is in the Workshop.
 
 Book - Ending Scene
 
-Ending Scene is a scene.
+Ending Scene is a recurring scene.
 
 Ending Scene begins when the player is in the Workshop. 
 
