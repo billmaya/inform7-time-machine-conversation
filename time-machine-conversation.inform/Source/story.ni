@@ -388,7 +388,8 @@ Chapter - Hello
 
 After saying hello to Humboldt when the greeting type is explicit or the greeting type is implicit: 
 	if the Ending Scene is happening:
-		say "ENDING SCENE RUNNING.";
+		[say "ENDING SCENE RUNNING.";]
+		say "[add time machine ask suggestion]";
 	if the Opening Scene is happening:
 		say "OPENING SCENE RUNNING."
 
