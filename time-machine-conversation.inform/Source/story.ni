@@ -200,6 +200,7 @@ The printed name of the fuse is "burnt out fuse".
 
 The time machine is a thing.
 The time machine is in the Workshop. 
+Understand "broken time machine" as time machine.
 The printed name of the time machine is "broken time machine".
 
 xyz-suggestion is a misc-suggestion. The printed name is "say XYZ". [The seqno is 2.]
@@ -394,7 +395,7 @@ Part - Conversation
 
 Chapter - Hello
 
-After saying hello to Humboldt when the greeting type is explicit or the greeting type is implicit: 
+After saying hello to Humboldt when the greeting type is explicit: [or the greeting type is implicit:]
 	if the Ending Scene is happening:
 		[say "ENDING SCENE RUNNING.";]
 		say "[add time machine ask suggestion]";
@@ -534,7 +535,8 @@ After quizzing Humboldt about diagnosis during Ending Scene:
 After quizzing Humboldt about examination during Ending Scene: 
 	say "'The preliminaries are already completed. I'll write my summary after you tell me what you found here."
 
-After quizzing Humboldt about time machine during Ending Scene: 
+After quizzing Humboldt about time machine during Ending Scene:
+	say "[remove time machine ask suggestion]";  
 	say "'Outside my area of expertise, I'm afraid.'"
 
 After quizzing Humboldt about pocket watch during Ending Scene: 
