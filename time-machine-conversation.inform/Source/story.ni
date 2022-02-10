@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 5028 ]
+[ WORDS - 5053 ]
 
 Volume - Setup
 
@@ -48,8 +48,6 @@ Include Conversation Framework by Eric Eve.
 Include Conversation Suggestions by Eric Eve.
 Include Conversational Defaults by Eric Eve.]
 Include Conversation Package by Eric Eve. [This extension includes the four extensions above it]
-
-[DEL Can things of  uncomment this Include line and comment out previous four Include lines]
 
 Include Flexible Windows by Jon Ingold.
 
