@@ -37,7 +37,7 @@ Every turn:
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 5053 ]
+[ WORDS - 5066 ]
 
 Volume - Setup
 
