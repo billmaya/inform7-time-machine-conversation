@@ -3,7 +3,7 @@ The story author is "Bill Maya".
 The story headline is "Conversation Experiments for 'The Time Machine'".
 
 To say introduction:
-	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations and two characters in this experiment:[paragraph break]• Kitchen                    • Mrs. Watchett (will always stay in the Kitchen)[line break]• Entryway                  • Dr. Humboldt (will follow you as you travel from Entryway to Workshop)[line break]• Workshop[paragraph break]Dr. Humboldt's replies will change depending on whether you are in the Entryway or the Workshop.[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them first before starting a conversation (it is not required though).[paragraph break]The list of things of some of the things that you can converse with a character about will be displayed in the 'Some Things To Talk About' section on the right. But they are just suggestions, you can experiment with other topics."
+	say "This conversation experiment is an attempt at using Eric Eve's Conversation Package extension with characters, things, and locations from The Time Machine v1.0 to make talking with characters in the story easier for the player.[paragraph break]Note: This is not a complete game so some responses might be 'out of character' and some objects might not be implemented.[paragraph break]There are three locations and two characters in this experiment:[paragraph break]• Kitchen                    • Mrs. Watchett (will always stay in the Kitchen)[line break]• Entryway                  • Dr. Humboldt (will follow you as you travel from Entryway to Workshop)[line break]• Workshop[paragraph break]You can interact with each character by asking, telling, or showing them things but you should say 'hello' to them first before starting a conversation (it is not required though).[paragraph break]The list of some of the things that you can converse with a character about will be displayed in the 'Some Things To Talk About' section on the right. But they are just suggestions, you can experiment with other topics.[paragraph break]Dr. Humboldt's replies will change depending on whether you are in the Entryway or the Workshop."
 
 When play begins:
 	say "[introduction]";
@@ -27,9 +27,9 @@ Every turn:
 		if the player is not in the Kitchen:
 			let the way be the best route from the location of Humboldt to the location of the player, using doors;
 			try Humboldt going the way;
-	[if current interlocutor is not nothing:]
+	[if current interlocutor is not nothing:] [I was trying to keep Humboldt as the current interlocutor as you moved from room to room but wasn't able to code it correctly yet]
 		[say "I'M TALKING TO SOMEONE.";]
-		[XYZ is the current interlocutor;]
+		[set XYZ to the current interlocutor;]
 		[xyz is a character variable;]
 		[now was-talking-to is the current interlocutor;]
 	refresh the list-characters window;
@@ -47,7 +47,9 @@ Book - Extensions
 Include Conversation Framework by Eric Eve.
 Include Conversation Suggestions by Eric Eve.
 Include Conversational Defaults by Eric Eve.]
-Include Conversation Package by Eric Eve. [Can uncomment this Include line and comment out previous four Include lines]
+Include Conversation Package by Eric Eve. [This extension includes the four extensions above it]
+
+[DEL Can things of  uncomment this Include line and comment out previous four Include lines]
 
 Include Flexible Windows by Jon Ingold.
 
@@ -398,8 +400,8 @@ After saying hello to Humboldt when the greeting type is explicit or the greetin
 	if the Ending Scene is happening:
 		[say "ENDING SCENE RUNNING.";]
 		say "[add time machine ask suggestion]";
-	if the Opening Scene is happening:
-		say "OPENING SCENE RUNNING."
+	[if the Opening Scene is happening:
+		say "OPENING SCENE RUNNING."]
 
 Chapter - Goodbye
 
@@ -429,9 +431,14 @@ After quizzing Humboldt about Watchett: say "I think she is in the kitchen."
 
 Section - Informing - "Tell [someone] about [thing]"	
 	
-After informing Humboldt about Wells: say "Humboldt gives you an increduous look as he listens to your learned but laymans opinion on Wells's condition."
-After informing Humboldt about the workshop-room: try quizzing Humboldt about the second noun.
-After informing Humboldt about the time machine: try quizzing Humboldt about the second noun.
+After informing Humboldt about Wells:
+	say "Humboldt gives you an increduous look as he listens to your learned but laymans opinion on Wells's condition."
+	
+After informing Humboldt about the workshop-room:
+	try quizzing Humboldt about the second noun.
+
+After informing Humboldt about the time machine:
+	try quizzing Humboldt about the second noun.
 
 Section - Imploring - "Ask [someone] for ['text']"
 
@@ -469,7 +476,8 @@ After quizzing Humboldt about examination during Opening Scene:
 	say "[remove examination ask suggestion]";
 	say "'First thing to do is get him to my hospital. Get him admitted and sedated. Probably won't be able to do a proper examination until he's calmed down.'";
 
-After quizzing Humboldt about time machine during Opening Scene: 
+After quizzing Humboldt about time machine during Opening Scene:
+	say "[remove time machine ask suggestion]"; 
 	say "'Nonsense,' Humboldt says. 'Some scientific figmant of his imagination he's dreamed up to make up for some failed hypothesis. I've seen it a hundred times with these scientific types when one of their pet theories goes wrong. Never underestimate the mind's power to deceive and reprogram itself, my friend.'";
 
 After quizzing Humboldt about pocket watch during Opening Scene:
