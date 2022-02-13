@@ -387,9 +387,9 @@ The printed name of Humboldt is "Dr. Humboldt".
 
 Part - Suggestions
 
-The ask-suggestions are { Wells, workshop-room, pocket watch, time travel, self-suggestion }.
+The ask-suggestions are { self-suggestion, Wells, workshop-room, pocket watch, time travel }. [, self-suggestion }.]
 [The tell-suggestions are {  }.]
-[The other-suggestions are {  }.]
+The other-suggestions are { }. [{ self-suggestion }.]
 
 Part - Conversation
 
