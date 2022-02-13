@@ -88,7 +88,7 @@ The measurement of the title-topics window is 1.
 The character-topics window is a text buffer g-window spawned by the right-sidebar window.
 The position of the character-topics window is g-placeabove.
 The scale method of the character-topics window is g-fixed-size.
-The measurement of the character-topics window is 7.
+The measurement of the character-topics window is 9. [DEL 7.]
 
 The title-inventory window is a text grid g-window spawned by the right-sidebar window.
 The position of the title-inventory window is g-placeabove.
