@@ -573,13 +573,16 @@ After quizzing Humboldt about the key during Ending Scene:
 After quizzing Humboldt about the fuse during the Ending Scene:
 	say "'Looks like it fits into that contraption Wells has constructed.'"
 
-After quizzing Humboldt about eloi during the Ending Scene:
+After quizzing Humboldt about Eloi during the Ending Scene:
+	say "[remove Eloi ask suggestion]";
 	say "[figment-imagination]".
 
-After quizzing Humboldt about weena during the Ending Scene:
+After quizzing Humboldt about Weena during the Ending Scene:
+	say "[remove Weena ask suggestion]";
 	say "[figment-imagination]".
 
-After quizzing Humboldt about morlocks during the Ending Scene:
+After quizzing Humboldt about Morlocks during the Ending Scene:
+	say "[remove Morlocks ask suggestion]";
 	say "[figment-imagination]".
 
 After quizzing Humboldt about the blueprints during Ending Scene: 
