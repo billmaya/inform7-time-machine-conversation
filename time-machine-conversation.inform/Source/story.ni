@@ -27,17 +27,12 @@ Every turn:
 		if the player is not in the Kitchen:
 			let the way be the best route from the location of Humboldt to the location of the player, using doors;
 			try Humboldt going the way;
-	[if current interlocutor is not nothing:] [I was trying to keep Humboldt as the current interlocutor as you moved from room to room but wasn't able to code it correctly yet]
-		[say "I'M TALKING TO SOMEONE.";]
-		[set XYZ to the current interlocutor;]
-		[xyz is a character variable;]
-		[now was-talking-to is the current interlocutor;]
 	refresh the list-characters window;
 	refresh the talking-to-character window;
 	refresh the character-topics window;
 	refresh the list-inventory window.
 	
-[ WORDS - 5066 ]
+[ WORDS - 5178 ]
 
 Volume - Setup
 
@@ -88,7 +83,7 @@ The measurement of the title-topics window is 1.
 The character-topics window is a text buffer g-window spawned by the right-sidebar window.
 The position of the character-topics window is g-placeabove.
 The scale method of the character-topics window is g-fixed-size.
-The measurement of the character-topics window is 9. [DEL 7.]
+The measurement of the character-topics window is 9.
 
 The title-inventory window is a text grid g-window spawned by the right-sidebar window.
 The position of the title-inventory window is g-placeabove.
@@ -235,11 +230,11 @@ her-work is a subject. Understand "work" or "her work" as her-work. The printed 
 diagnosis is a subject.
 examination is a subject.
 
-future is a subject. [Understand "802,701" or "802,701 A.D." as future.] The printed name of future is "the future".
+future is a subject. The printed name of future is "the future". [Understand "802,701" or "802,701 A.D." as future.] 
 time travel is a subject.
-Eloi are a subject. [DEL Understand "eloi" as Eloi.] The printed name of Eloi is "the Eloi".
-Weena is a subject. [DEL Understand "weena" as Weena.]
-Morlocks are a subject. Understand "morlock" or "morlocks" as Morlocks. The printed name of Morlocks is "the Morlocks".
+Eloi are a subject. The printed name of Eloi is "the Eloi".
+Weena is a subject. 
+Morlocks are a subject. The printed name of Morlocks is "the Morlocks". Understand "morlock" or "morlocks" as Morlocks. 
 	
 river is a subject.
 sphinx is a subject.
@@ -388,9 +383,9 @@ The printed name of Humboldt is "Dr. Humboldt".
 
 Part - Suggestions
 
-The ask-suggestions are { self-suggestion, Wells, workshop-room, pocket watch, time travel }. [DEL , self-suggestion }.]
+The ask-suggestions are { self-suggestion, Wells, workshop-room, pocket watch, time travel }.
 [The tell-suggestions are {  }.]
-[The other-suggestions are { }.] [DEL { self-suggestion }.]
+[The other-suggestions are { }.]
 
 Part - Conversation
 
@@ -399,7 +394,6 @@ Chapter - Hello
 After saying hello to Humboldt when the greeting type is explicit: [or the greeting type is implicit:]
 	say "[Humboldt] replies to your greeting and waits expectantly.";
 	if the Ending Scene is happening:
-		[DEL say "ENDING SCENE RUNNING.";]
 		say "[add time machine ask suggestion]";
 		say "[add Eloi tell suggestion]";
 		say "[add Weena tell suggestion]";
