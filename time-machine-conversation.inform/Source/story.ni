@@ -235,11 +235,12 @@ her-work is a subject. Understand "work" or "her work" as her-work. The printed 
 diagnosis is a subject.
 examination is a subject.
 
-future is a subject. [Understand "802,701" or "802,701 A.D." as future.]
+future is a subject. [Understand "802,701" or "802,701 A.D." as future.] The printed name of future is "the future".
 time travel is a subject.
-Eloi are a subject. Understand "eloi" as Eloi.
-Weena is a subject. Understand "weena" as Weena.
-Morlocks are a subject. Understand "morlock" or "morlocks" as Morlocks.
+Eloi are a subject. [DEL Understand "eloi" as Eloi.] The printed name of Eloi is "the Eloi".
+Weena is a subject. [DEL Understand "weena" as Weena.]
+Morlocks are a subject. Understand "morlock" or "morlocks" as Morlocks. The printed name of Morlocks is "the Morlocks".
+	
 river is a subject.
 sphinx is a subject.
 dome is a subject. Understand "domed building" as dome.
@@ -398,13 +399,22 @@ Chapter - Hello
 After saying hello to Humboldt when the greeting type is explicit: [or the greeting type is implicit:]
 	say "[Humboldt] replies to your greeting and waits expectantly.";
 	if the Ending Scene is happening:
-		[say "ENDING SCENE RUNNING.";]
+		[DEL say "ENDING SCENE RUNNING.";]
 		say "[add time machine ask suggestion]";
+		say "[add Eloi tell suggestion]";
+		say "[add Weena tell suggestion]";
+		say "[add Morlocks tell suggestion]";
 	[if the Opening Scene is happening:
 		say "OPENING SCENE RUNNING."]
 	
 After saying hello to Humboldt when the greeting type is implicit:
-	say "Dr. Humboldt [one of]pauses [or]thinks [or]clears his throat [or]stares at you [at random]for a moment before answering. [run paragraph on]"
+	say "Dr. Humboldt [one of]pauses [or]thinks [or]clears his throat [or]stares at you [at random]for a moment before answering. [run paragraph on]";
+	if the Ending Scene is happening:
+		say "[add time machine ask suggestion]";
+		say "[add future tell suggestion]";
+		say "[add Eloi tell suggestion]";
+		say "[add Weena tell suggestion]";
+		say "[add Morlocks tell suggestion]";
 
 Chapter - Goodbye
 
@@ -597,18 +607,22 @@ After informing Humboldt about time travel during the Ending Scene:
 	follow Patience rules.
 
 After informing Humboldt about the future during the Ending Scene:
+	say "[remove future tell suggestion]";
 	say "Humboldt listens as you recount your experiences in 802,701 A.D. with a [patience of Humboldt] look on his face.";
 	follow Patience rules.
 
 After informing Humboldt about Eloi during the Ending Scene:
+	say "[remove Eloi tell suggestion]";
 	say "Humboldt listens as you recount your experience with the Eloi with a [patience of Humboldt] look on his face.";
 	follow Patience rules.
 
 After informing Humboldt about Weena during the Ending Scene:
+	say "[remove Weena tell suggestion]";
 	say "Humboldt listens to you recount your experience with Weena with a [patience of Humboldt] look on his face.";
 	follow Patience rules.
 
 After informing Humboldt about Morlocks during the Ending Scene:
+	say "[remove Morlocks tell suggestion]";
 	say "Humboldt listens to you recount your experience with the Morlocks with a [patience of Humboldt] look on his face.";
 	follow Patience rules.
 	
