@@ -396,11 +396,15 @@ Part - Conversation
 Chapter - Hello
 
 After saying hello to Humboldt when the greeting type is explicit: [or the greeting type is implicit:]
+	say "[Humboldt] replies to your greeting and waits expectantly.";
 	if the Ending Scene is happening:
 		[say "ENDING SCENE RUNNING.";]
 		say "[add time machine ask suggestion]";
 	[if the Opening Scene is happening:
 		say "OPENING SCENE RUNNING."]
+	
+After saying hello to Humboldt when the greeting type is implicit:
+	say "Dr. Humboldt [one of]pauses [or]thinks [or]clears his throat [or]stares at you [at random]for a moment before answering. [run paragraph on]"
 
 Chapter - Goodbye
 
@@ -548,8 +552,8 @@ After quizzing Humboldt about the petal during Ending Scene:
 After quizzing Humboldt about the key during Ending Scene:
 	say "'[one of]I knew you would find it. [or]Mrs. Watchett knew where it was, I bet. [or]Good job. [or]Obviously it[']s the workshop key since we[']re standing in the bloody place. [at random]What have you found?'"
 
-After quizzing Humboldt about the blueprints during the Ending Scene:
-	say "'Your guess is as good as mind.'"
+[After quizzing Humboldt about the blueprints during the Ending Scene:
+	say "'Your guess is as good as mind.'"]
 
 After quizzing Humboldt about the fuse during the Ending Scene:
 	say "'Looks like it fits into that contraption Wells has constructed.'"
