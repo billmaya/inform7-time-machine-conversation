@@ -388,9 +388,9 @@ The printed name of Humboldt is "Dr. Humboldt".
 
 Part - Suggestions
 
-The ask-suggestions are { self-suggestion, Wells, workshop-room, pocket watch, time travel }. [, self-suggestion }.]
+The ask-suggestions are { self-suggestion, Wells, workshop-room, pocket watch, time travel }. [DEL , self-suggestion }.]
 [The tell-suggestions are {  }.]
-The other-suggestions are { }. [{ self-suggestion }.]
+[The other-suggestions are { }.] [DEL { self-suggestion }.]
 
 Part - Conversation
 
@@ -428,10 +428,15 @@ To say science-fiction: say "'Science fiction if you ask me.'"
 
 After quizzing Humboldt about time travel:
 	say "[remove time travel ask suggestion]";
+	say "[add future ask suggestion]";
 	say "[add Eloi ask suggestion]";
 	say "[add Weena ask suggestion]";
 	say "[add Morlocks ask suggestion]";
 	say "[science-fiction]".
+	
+After quizzing Humboldt about the future:
+	say "[remove future ask suggestion]";
+	say "Thinking for a moment, he replies 'In due time.'"
 
 After quizzing Humboldt about the poker: say "'Where did you get that?'"
 	
