@@ -708,7 +708,9 @@ A patience rule:
 		-- frustrated:
 			now the patience of Humboldt is angry;
 		-- angry:
-			now the patience of Humboldt is angry.
+			say "AUTHOR'S NOTE: At this point in the original Time Machine game Humboldt's patience would be exhausted. Deciding that you are as delusional as Wells, he would have you dragged of to his hospital. However, in this mini-game Humboldt's patience is simply reset to 'tolerant.'[paragraph break]";
+			now the patience of Humboldt is tolerant.
+			[DEL now the patience of Humboldt is angry.]
 
 [ For testing purposed
 The patiences are trustworthy, loyal, helpful, friendly, courteous, obedient, cheerful, thrifty, brave, clean, reverent. [Inform 7 doesn't like "kind"]
